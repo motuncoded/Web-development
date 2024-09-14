@@ -63,7 +63,7 @@ nstead of waiting for tasks to complete, Node.js works by listening for events. 
 
 ---
 
-Node.js's event-driven, non-blocking I/O model makes it a powerful tool for building scalable, real-time, and high-performance applications.
+### Node.js's event-driven, non-blocking I/O model makes it a powerful tool for building scalable, real-time, and high-performance applications.
 ---
 
 ## 🛠 **Installing Node.js**
