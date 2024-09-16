@@ -71,6 +71,7 @@ const server = http.createServer((req, res) => {
 ---
 
 ## 🚀 **Learning Resources for Day 3**
+
 - [Node.js HTTP Module Documentation](https://nodejs.org/api/http.html)
 - [How to Create a Web Server in Node.js - DigitalOcean Guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module/)
 - [Understanding HTTP Methods (GET, POST, etc.)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)

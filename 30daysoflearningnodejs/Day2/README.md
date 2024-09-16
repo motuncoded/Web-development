@@ -104,8 +104,7 @@ fs.unlink('output.txt', (err) => {
 - Asynchronous vs. Synchronous: In Node.js, it's essential to understand the differences between synchronous and asynchronous methods, especially when dealing with file I/O.
 - Callbacks: Node.js uses callbacks to handle asynchronous operations. Today’s tasks will give you a practical understanding of how callbacks work.
 
-## 🚀 Learning Resources for Day 2
-## 📚 **Learning Resources**
+## 📚 **Learning Resources  for Day 2**
 
 Here are some of the key resources you'll use throughout this journey:
 
