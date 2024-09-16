@@ -77,9 +77,24 @@ Node.js's event-driven, non-blocking I/O model makes it a powerful tool for buil
   ```bash
   node -v
   npm -v
+  ```
 
 ### Step 3: Initialize npm init -y
 -This will create a package.json to run the program
+```bash 
+npm init -y
+```
+
 
 ### Step 4: Run the node app.js
 -This will run the node app.js file
+```bash
+node app.js
+```
+---
+
+## 📚 **Learning Resources**
+- [Node.js Introduction - Official Docs](https://nodejs.org/en/learn/getting-started/introuction-to-nodejs/)
+- [What is Nodejs](https://nodejs.org/en/docs/)
+- [npm documentation](https://docs.npmjs.com/getting-started/)
+

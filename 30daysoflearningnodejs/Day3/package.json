@@ -1,0 +1,12 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "Welcome to **Day 3** of your Node.js learning journey! Today, you will learn how to create an HTTP server from scratch using Node.js' built-in **`http`** module. You'll also explore how to handle **requests** and **responses** in a Node.js application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

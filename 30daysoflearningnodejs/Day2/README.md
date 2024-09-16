@@ -105,6 +105,11 @@ fs.unlink('output.txt', (err) => {
 - Callbacks: Node.js uses callbacks to handle asynchronous operations. Today’s tasks will give you a practical understanding of how callbacks work.
 
 ## 🚀 Learning Resources for Day 2
-Node.js fs Module Documentation
-Asynchronous Programming in Node.js
-What is the Node.js Event Loop?
+## 📚 **Learning Resources**
+
+Here are some of the key resources you'll use throughout this journey:
+
+- [Node.js fs Module Documentation](https://nodejs.org/api/fs.html)
+- [Asynchronous Programming in Node.js](https://nodejs.org/en/learn/asychronous-work/javascript-asychronous-programming-and-callbacks/)
+- [What is the Node.js Event Loop?](https://nodejs.org/en/learn/asychronous-work/event-loop-timers-and-nexttick/)
+
