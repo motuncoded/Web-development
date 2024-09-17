@@ -20,6 +20,8 @@ This plan is designed to help you:
 1. **Day 1**: Introduction to Node.js
 2. **Day 2**: Node.js Core Modules and Working with the File System
 3. **Day 3**: HTTP Server 
+4. **Day 4**: HTTP methods
+
 
 ---
 
