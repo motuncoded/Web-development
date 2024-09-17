@@ -112,4 +112,3 @@ Here are some of the key resources you'll use throughout this journey:
 - [Asynchronous Programming in Node.js](https://nodejs.org/en/learn/asychronous-work/javascript-asychronous-programming-and-callbacks/)
 - [What is the Node.js Event Loop?](https://nodejs.org/en/learn/asychronous-work/event-loop-timers-and-nexttick/)
 
-
