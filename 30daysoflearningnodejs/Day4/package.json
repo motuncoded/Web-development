@@ -1,0 +1,12 @@
+{
+  "name": "day4",
+  "version": "1.0.0",
+  "description": "Welcome to **Day 4!** Today, you'll dive deeper into how **HTTP methods** work in Node.js and how to handle each one using Node.js' built-in http module. You will extend the basic server you built earlier to handle **GET**, **POST**, **PUT**, and **DELETE** requests.",
+  "main": "method.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
