@@ -2,6 +2,7 @@
 
 Welcome to the **30 Days to Learn Node.js** guide! This step-by-step plan will take you from a beginner in Node.js to building a full-stack application and deploying it.
 
+
 ## Overview
 
 This plan is designed to help you:
@@ -20,6 +21,10 @@ This plan is designed to help you:
 1. **Day 1**: Introduction to Node.js
 2. **Day 2**: Node.js Core Modules and Working with the File System
 3. **Day 3**: HTTP Server 
+
+4. **Day 4**: HTTP methods
+
+
 
 ---
 
