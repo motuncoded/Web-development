@@ -2,6 +2,7 @@ const http = require("http");
 
 // In-memory data stores
 let users = ['motunrayo'];
+
 let products = [];
 
 // Helper function to parse JSON body
