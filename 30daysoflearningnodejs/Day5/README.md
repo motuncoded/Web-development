@@ -197,7 +197,6 @@ const server = http.createServer(async (req, res) => {
                 res.end(JSON.stringify({ message: 'User added' }));
             });
         } 
-        // Add PUT and DELETE handling with MongoDB here...
     }
 });
 
