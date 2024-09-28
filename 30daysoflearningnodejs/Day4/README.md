@@ -17,7 +17,6 @@ Understanding HTTP Methods
 GET: The default method, typically used for fetching data from the server.
 POST: Used for sending data to the server, such as submitting form data.
 
-
 Step 1: Basic Server Structure
 Here’s how to build a basic server that listens for different HTTP methods.
 ```javascript
