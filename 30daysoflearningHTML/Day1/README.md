@@ -47,4 +47,4 @@ The `<body>` tag contains all the content that will be displayed on the webpage,
     <p>This is your first webpage! Today, we are learning about the basic structure of an HTML document.</p>
 </body>
 </html>
-```
+
