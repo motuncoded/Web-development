@@ -2,6 +2,7 @@
 
 Welcome to the **30 Days to Learn Node.js** guide! This step-by-step plan will take you from a beginner in Node.js to building a full-stack application and deploying it.
 
+
 ## Overview
 
 This plan is designed to help you:
@@ -31,9 +32,6 @@ This plan is designed to help you:
 
 
 
-
-
-
 ---
 
 ## 📚 **Learning Resources**
@@ -44,3 +42,4 @@ Here are some of the key resources you'll use throughout this journey:
 - [Express.js Documentation](https://expressjs.com/)
 - [Mongoose Documentation](https://mongoosejs.com/)
 - [CRUD API from FreeCodeCamp](https://www.youtube.com/watch?v=_7UQPve99r4&t=1570s)
+

@@ -12,6 +12,7 @@ HTTP methods are the actions that can be performed on resources on the server. H
 ## 🛠 **Setting Up the Server to Handle HTTP Methods**
 We’ll create a Node.js server that can respond to GET, POST, PUT, and DELETE requests.
 
+
 Understanding HTTP Methods
 GET: The default method, typically used for fetching data from the server.
 POST: Used for sending data to the server, such as submitting form data.
