@@ -4,7 +4,8 @@
   "description": "Welcome to **Day 1** of your Node.js learning journey! By the end of today, you'll understand what Node.js is, why it's important, and how to install and run your first Node.js application.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node app.js"
   },
   "keywords": [],
   "author": "",
