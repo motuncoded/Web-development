@@ -121,3 +121,8 @@ This 30-day plan will guide you through learning TypeScript, from basics to adva
 ### Day 30: Build and Deploy a TypeScript Project
 - Build and deploy a full TypeScript project (e.g., API, CLI, or small web app).
 
+---
+
+## Resources
+- [Advanced typescript utility types](https://dev.to/bhataasim/advanced-typescript-utility-types-in-detail-4mdh)
+

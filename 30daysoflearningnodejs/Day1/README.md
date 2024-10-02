@@ -93,8 +93,16 @@ node app.js
 ```
 ---
 
+## Key points
+- Nodejs is a runtime environment - an environment that allow an application or program to be executed.
+It allow the run time to run javascript program.
+it also allow the running of npm packages -Node package Manager 
+A module is a block of code that is allow to do something
+
+
 ## 📚 **Learning Resources**
 - [Node.js Introduction - Official Docs](https://nodejs.org/en/learn/getting-started/introuction-to-nodejs/)
 - [What is Nodejs](https://nodejs.org/en/docs/)
 - [npm documentation](https://docs.npmjs.com/getting-started/)
+- [Introduction to nodejs](https://www.youtube.com/watch?v=q-xS25lsN3I)
 
