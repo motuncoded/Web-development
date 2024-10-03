@@ -1,3 +1,3 @@
 # **Lists of articles to read**
 
-- [How should we desfine CSS](https://developer.chrome.com/blog/masonry-synthax/)
+- [How should we define CSS](https://developer.chrome.com/blog/masonry-synthax/)
