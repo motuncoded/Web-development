@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form </title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <label for=""> Name:</label>
+      <input type="text" id="username" name="username" minlength="3" maxlength="50" required>
+ <label for="email">Email:</label>
+  <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+<label for="password"></label>
+<input type="password" name="password" maxlength="8" required>
+<label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+  <fieldset>
+    <legend>Gender:</legend>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="email">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="phone">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other" required>
+    <label for="post">Other</label>
+</fieldset>
+<label for="Color picker"> Color Picker</label>
+<input type="color" name="" id="" value="">
+ <label for="comments">Comments:</label>  
+    <textarea id="comments" name="comments" maxlength="250" placeholder="Enter your comments..."></textarea>  
+    
+</body>
+</html>

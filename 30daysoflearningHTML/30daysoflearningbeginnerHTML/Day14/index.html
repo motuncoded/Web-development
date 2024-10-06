@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding Media (Audio, Video, Iframe)</title>
+</head>
+<body>
+    <div>
+        <!--for a single file supported audio and video-->
+        <audio controls></audio>
+  <source src="path-to-your-audio-file.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<video controls></video>
+  <source src="path-to-your-video-file.mp4" type="video/mp4">
+  Your browser does not support the video element.
+</video>
+        <!--for multiple file supported audios and videos-->
+<audio controls></audio>
+  <source src="audio/music.mp3" type="audio/mpeg">
+  <source src="audio/music.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+
+<video controls width="600"></video>
+  <source src="video/sample.mp4" type="video/mp4">
+  <source src="video/sample.ogg" type="video/ogg">
+  Your browser does not support the video element.
+</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+frameborder="0" allowfullscreen>
+</iframe>`
+    </div>
+
+    
+</body>
+</html>

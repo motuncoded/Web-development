@@ -11,6 +11,10 @@ Learn the basics of creating forms in HTML, working with input fields, and under
 1. **HTML Forms Basics**
    - `<form>` tag: Structure and purpose
    - Attributes: `action`, `method` (`GET` vs `POST`)
+   action: The URL where the form data will be sent when submitted.
+method: The HTTP method used to send data (commonly "GET" or "POST").
+
+### Basic structure for form
    
 2. **Input Fields**
    - Common types: 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div role="button" tabindex="0">Click Me</div>
+<nav role="navigation"></nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+<div role="alert">Form submission failed!</div>
+<div role="dialog" aria-labelledby="dialog-title">
+  <h2 id="dialog-title">Confirmation</h2>
+  <p>Are you sure you want to proceed?</p>
+</div>
+    <button aria-label="Close menu">X</button>
+<button aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu" hidden>
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+</ul>
+
+<div aria-hidden="true">This text is hidden from assistive technologies</div>
+<button aria-disabled="true">Submit</button>
+<div aria-live="polite">New message received.</div>
+<button aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu"></button>
+  Options
+</button>
+<ul id="dropdown-menu" role="menu" hidden>
+  <li role="menuitem"><a href="#">Item 1</a></li>
+  <li role="menuitem"><a href="#">Item 2</a></li>
+</ul>
+<div role="dialog" aria-labelledby="modal-title" aria-modal="true"></div>
+  <h2 id="modal-title">Modal Title</h2>
+  <p>Content of the modal goes here.</p>
+  <button aria-label="Close" onclick="closeModal()">Close</button>
+</div>
+</body>
+</html>

@@ -1,4 +1,5 @@
 # Day 6: Tables in HTML
+HTML tables are a way to display data in a grid-like structure of rows and columns. They are often used to present information like schedules, reports, and statistics. Below is a detailed explanation of how to create and style tables in HTML.      z
 
 ## Objectives
 - Learn how to create basic tables using HTML.
@@ -51,35 +52,7 @@ Create a table to display student grades with the following headers:
 
 **HTML Example:**
 
-```html
-<table>
-    <caption>Student Grades</caption>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Grade</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Alice</td>
-            <td>Math</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>Science</td>
-            <td>B</td>
-        </tr>
-        <tr>
-            <td>Carol</td>
-            <td>History</td>
-            <td>A-</td>
-        </tr>
-    </tbody>
-</table>
-```
+
 
 ### Accessibility Considerations
 When creating tables, consider accessibility best practices:

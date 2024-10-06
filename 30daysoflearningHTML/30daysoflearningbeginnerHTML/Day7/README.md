@@ -13,7 +13,8 @@ Common Block-level Elements:
 - **`<p>`**: Paragraph.
 - **`<ul>`**, **`<ol>~**, **`<li>`**: Lists.
 - **`<header>`**, **`<footer>`**, **`<section>`**, **`<article>`**, **`<nav>`**, **`<aside>`**: Semantic layout elements.
-- **`<table>`**: Table container.
+- **`<table>`**: Table container.p
+
 Behavior:
 
 Block elements take up the full width of the parent container.
@@ -58,46 +59,6 @@ Differences Between Block-level and Inline-level Elements:
 | Stacking                | Stacks vertically on top of each other | Appears horizontally in a line         |
 | Nested elements         | Can contain both block-level and inline-level elements | Can only contain inline elements       |
 
-Practical Example: Combining Block and Inline Elements
-``` html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block vs Inline Elements</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Webpage</h1>
-        <nav>
-            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Article Title</h2>
-            <p>This is a paragraph that contains both block and inline elements. Here's a <span style="color: red;">highlighted</span> word and <a href="#">this is a link</a>.</p>
-            <p>The following image is an inline element:</p>
-            <img src="https://via.placeholder.com/150" alt="Placeholder image">
-        </section>
-
-        <aside>
-            <h3>Related Links</h3>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-            </ul>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Webpage</p>
-    </footer>
-</body>
-</html>
-```
 
 ### Best Practices for Block and Inline Elements
 - Use Semantic HTML Tags:

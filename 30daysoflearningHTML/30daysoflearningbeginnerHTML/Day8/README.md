@@ -85,57 +85,20 @@ The <article> tag defines independent, self-contained content that could stand a
 Example:
 
 ```html
-Copy code
 <article>
     <h2>Understanding Semantic HTML</h2>
     <p>Semantic HTML improves the structure of your web pages and helps search engines better understand your content.</p>
 </article>
 ```
-Combining Semantic Tags for a Structured Webpage
-Below is a simple example that combines the semantic tags discussed above into a coherent structure for a basic webpage:
+
+- 6. `<figure>` and `<figcaption>`
+Purpose: `<figure>` groups media content (like images, diagrams) and `<figcaption>` provides a caption for it.
+Usage: Used together to semantically associate media with its description.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-</head>
-<body>
-
-    <header>
-        <h1>My Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <article>
-                <h2>Understanding Semantic HTML</h2>
-                <p>Semantic HTML improves the structure of your web pages and helps search engines better understand your content.</p>
-            </article>
-        </section>
-
-        <section>
-            <h2>Latest Posts</h2>
-            <article>
-                <h3>Post Title</h3>
-                <p>Summary of the blog post.</p>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+Copy code
+<figure>
+  <img src="image.jpg" alt="Description of image">
+  <figcaption>Figure 1: An example image.</figcaption>
+</figure>
 ```
