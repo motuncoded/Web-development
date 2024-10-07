@@ -7,49 +7,55 @@ File uploads are a common requirement in web applications, allowing users to sub
 To create a form that allows file uploads, you will use the <input> element with the type="file" attribute. This enables users to browse and select files from their local system.
 
 Basic Syntax:
-html
+```html
 Copy code
 <form action="upload.php" method="POST" enctype="multipart/form-data">
   <label for="fileUpload">Choose a file:</label>
   <input type="file" id="fileUpload" name="fileUpload" required>
   <button type="submit">Upload</button>
 </form>
+```
 Key Attributes:
-action: Specifies the URL where the form data will be sent upon submission.
-method: Indicates the HTTP method to be used (typically POST for file uploads).
-enctype: Set to multipart/form-data to handle file uploads correctly.
-2. Handling Multiple File Uploads
+-action: Specifies the URL where the form data will be sent upon submission.
+- method: Indicates the HTTP method to be used (typically POST for file uploads).
+- enctype: Set to multipart/form-data to handle file uploads correctly.
+
+## 2. Handling Multiple File Uploads
 To allow users to upload multiple files at once, you can add the multiple attribute to the file input.
 
 Example:
-html
+```html
 Copy code
 <form action="upload.php" method="POST" enctype="multipart/form-data">
   <label for="fileUpload">Choose files:</label>
   <input type="file" id="fileUpload" name="files[]" multiple required>
   <button type="submit">Upload</button>
 </form>
+```
 Note:
 Use name="files[]" to treat the uploaded files as an array on the server side.
-3. Restricting File Types
+
+## 3. Restricting File Types
 To enhance user experience and security, you can restrict the types of files users can upload using the accept attribute.
 
 Example:
-html
+```html
 Copy code
 <form action="upload.php" method="POST" enctype="multipart/form-data">
   <label for="imageUpload">Upload an image:</label>
   <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
   <button type="submit">Upload</button>
 </form>
+```
 Accepted Formats:
 Use accept="image/*" to allow any image format.
 You can specify specific formats like accept=".jpg,.jpeg,.png,.gif".
-4. Progress Indicators for File Uploads
+
+## 4. Progress Indicators for File Uploads
 To enhance user experience during file uploads, consider implementing a progress indicator. You can achieve this using JavaScript and the XMLHttpRequest API.
 
 Example:
-html
+```html
 Copy code
 <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data">
   <label for="fileUpload">Choose a file:</label>
@@ -91,14 +97,17 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
   xhr.send(formData);
 });
 </script>
+```
 Features:
 Displays a progress bar to indicate upload progress.
 Provides feedback upon successful or failed uploads.
-5. Server-Side Handling of File Uploads
+
+
+## 5. Server-Side Handling of File Uploads
 On the server side, you'll need to handle the uploaded files properly. Here's a basic example using PHP:
 
 Example (PHP):
-php
+```php
 Copy code
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -113,10 +122,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+```
 Key Functions:
 move_uploaded_file(): Moves the uploaded file to a specified directory.
 Ensure proper validation and sanitization of uploaded files to prevent security vulnerabilities.
-6. Best Practices for File Uploads
+
+## 6. Best Practices for File Uploads
 Validate file types and sizes: Always validate file types and sizes on both client and server sides to enhance security.
 Limit file size: Use server-side settings to limit the size of uploaded files.
 Store files securely: Avoid storing files in publicly accessible directories to prevent unauthorized access.
