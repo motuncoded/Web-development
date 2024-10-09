@@ -1,56 +1,67 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Accessible Form</title>  
-    <style>  
-        label {  
-            display: block;  /* Makes labels appear as block elements */  
-            margin-bottom: 5px;  
-        }  
-        input, textarea, select {  
-            margin-bottom: 20px;  /* Spacing between form elements */  
-            width: 100%;  /* Full-width inputs */  
-            padding: 8px;  /* Padding for better touch target */  
-        }  
-    </style>  
-</head>  
-<body>  
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form</title>
+    <style>
+      label {
+        display: block; /* Makes labels appear as block elements */
+        margin-bottom: 5px;
+      }
+      input,
+      textarea,
+      select {
+        margin-bottom: 20px; /* Spacing between form elements */
+        width: 100%; /* Full-width inputs */
+        padding: 8px; /* Padding for better touch target */
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="POST" aria-labelledby="form-title">
+      <h2 id="form-title">User Registration</h2>
 
-<form action="/submit" method="POST" aria-labelledby="form-title">  
-    <h2 id="form-title">User Registration</h2>  
-    
-    <label for="username">Username:</label>  
-    <input type="text" id="username" name="username" placeholder="Enter your username" required>  
-    
-    <label for="password">Password:</label>  
-    <input type="password" id="password" name="password" required>  
-    
-    <label for="email">Email:</label>  
-    <input type="email" id="email" name="email" required>  
-    
-    <label for="age">Age:</label>  
-    <input type="number" id="age" name="age" min="1" max="100" required>  
-    
-    <label>Gender:</label>  
-    <input type="radio" id="male" name="gender" value="male" required>   
-    <label for="male">Male</label>  
-    <input type="radio" id="female" name="gender" value="female" required>   
-    <label for="female">Female</label>  
-    
-    <label for="country">Country:</label>  
-    <select id="country" name="country" required>  
-        <option value="us">United States</option>  
-        <option value="ca">Canada</option>  
-        <option value="uk">United Kingdom</option>  
-    </select>  
-    
-    <label for="comments">Comments:</label>  
-    <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments..."></textarea>  
-    
-    <input type="submit" value="Submit">  
-</form>  
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+      />
 
-</body>  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="1" max="100" required />
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+
+      <label for="comments">Comments:</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        placeholder="Enter your comments..."
+      ></textarea>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- internal javascript from head -->
+  <script>
+    function showMessage() {
+      alert("Hello from JavaScript!");
+    }
+  </script>
+  <body>
+    <!-- inline javascript -->
+    <button onclick="alert('Button clicked!')">Click me</button>
+    <button onclick="showMessage()">Click me</button>
+
+    <p id="message">Original text</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <div
+      id="box"
+      style="width: 100px; height: 100px; background-color: red"
+    ></div>
+    <button onclick="changeStyle()">Change Color</button>
+    <!-- internal javascript from body-->
+    <script>
+      function showAlert() {
+        alert("Hello from JavaScript!");
+      }
+    </script>
+
+    <!-- External javascript from script attribute which can be placed in the head or body tag-->
+    <script src="script.js"></script>
+  </body>
+</html>

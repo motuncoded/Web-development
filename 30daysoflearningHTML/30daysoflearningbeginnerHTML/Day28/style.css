@@ -1,0 +1,17 @@
+body {
+  background-color: #f0f0f0;
+}
+h1 {
+  color: green;
+}
+/* element seletor */
+p {
+  font-size: 18px;
+}
+/* class selector */
+.intro {
+  font-size: 24px;
+}
+#main-heading {
+  font-size: 36px;
+}

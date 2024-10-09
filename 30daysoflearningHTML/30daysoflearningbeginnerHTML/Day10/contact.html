@@ -1,27 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Contact Us</h2>
     <form action="/submit" method="post">
-        <!-- Name Field -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+      <!-- Name Field -->
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+      /><br /><br />
 
-        <!-- Email Field -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+      <!-- Email Field -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email"
+        required
+      /><br /><br />
 
-        <!-- Message Field -->
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message" required></textarea><br><br>
+      <!-- Message Field -->
+      <label for="message">Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Your message"
+        required
+      ></textarea
+      ><br /><br />
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
     </form>
-</body>
+  </body>
 </html>

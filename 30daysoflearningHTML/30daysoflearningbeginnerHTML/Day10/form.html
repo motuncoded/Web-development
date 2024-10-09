@@ -1,27 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form with Validation</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Contact Us</h2>
     <form action="/submit" method="post">
-        <!-- Name Field with Validation -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces."><br><br>
+      <!-- Name Field with Validation -->
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+        pattern="[A-Za-z\s]+"
+        title="Name should only contain letters and spaces."
+      /><br /><br />
 
-        <!-- Email Field with Validation -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+      <!-- Email Field with Validation -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email"
+        required
+      /><br /><br />
 
-        <!-- Message Field with Validation -->
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message" required minlength="10"></textarea><br><br>
+      <!-- Message Field with Validation -->
+      <label for="message">Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Your message"
+        required
+        minlength="10"
+      ></textarea
+      ><br /><br />
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
     </form>
-</body>
+  </body>
 </html>

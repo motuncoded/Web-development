@@ -1,48 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microdata and asacheme.org</title>
-</head>
-<body>
-<div itemscope itemtype="https://schema.org/Product">
-  <h2 itemprop="name">Smartphone</h2>
-  <img src="smartphone.jpg" alt="Smartphone" itemprop="image">
-  <p itemprop="description">A powerful smartphone with a sleek design.</p>
-  <p>Price: <span itemprop="price">$599.99</span></p>
-  <p>Brand: <span itemprop="brand" itemscope itemtype="https://schema.org/Brand">
-    <span itemprop="name">TechBrand</span>
-  </span></p>
-</div>
-<div itemscope itemtype="https://schema.org/Product">
-  <h2 itemprop="name">Smartwatch</h2>
-  <p itemprop="description">A sleek smartwatch with a variety of health features.</p>
-  <p>Price: <span itemprop="price">$299.99</span></p>
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <p>Rated: <span itemprop="ratingValue">4.5</span> stars by <span itemprop="reviewCount">123</span> users.</p>
-  </div>
-</div>
+  </head>
+  <body>
+    <div itemscope itemtype="https://schema.org/Product">
+      <h2 itemprop="name">Smartphone</h2>
+      <img src="smartphone.jpg" alt="Smartphone" itemprop="image" />
+      <p itemprop="description">A powerful smartphone with a sleek design.</p>
+      <p>Price: <span itemprop="price">$599.99</span></p>
+      <p>
+        Brand:
+        <span itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+          <span itemprop="name">TechBrand</span>
+        </span>
+      </p>
+    </div>
+    <div itemscope itemtype="https://schema.org/Product">
+      <h2 itemprop="name">Smartwatch</h2>
+      <p itemprop="description">
+        A sleek smartwatch with a variety of health features.
+      </p>
+      <p>Price: <span itemprop="price">$299.99</span></p>
+      <div
+        itemprop="aggregateRating"
+        itemscope
+        itemtype="https://schema.org/AggregateRating"
+      >
+        <p>
+          Rated: <span itemprop="ratingValue">4.5</span> stars by
+          <span itemprop="reviewCount">123</span> users.
+        </p>
+      </div>
+    </div>
 
-<!-- other use cases -->
-<!-- in articles and blog -->
-<article itemscope itemtype="https://schema.org/Article">
-  <h1 itemprop="headline">The Future of Technology</h1>
-  <p itemprop="author" itemscope itemtype="https://schema.org/Person">
-    Written by <span itemprop="name">John Doe</span>
-  </p>
-  <time itemprop="datePublished" datetime="2024-01-15">January 15, 2024</time>
-  <p itemprop="articleBody">
-    The technology landscape is changing rapidly...
-  </p>
-</article>
+    <!-- other use cases -->
+    <!-- in articles and blog -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <h1 itemprop="headline">The Future of Technology</h1>
+      <p itemprop="author" itemscope itemtype="https://schema.org/Person">
+        Written by <span itemprop="name">John Doe</span>
+      </p>
+      <time itemprop="datePublished" datetime="2024-01-15"
+        >January 15, 2024</time
+      >
+      <p itemprop="articleBody">
+        The technology landscape is changing rapidly...
+      </p>
+    </article>
 
-<!-- for events website -->
- <div itemscope itemtype="https://schema.org/Event">
-  <h2 itemprop="name">Tech Conference 2024</h2>
-  <p>Date: <time itemprop="startDate" datetime="2024-05-01T08:00">May 1, 2024</time></p>
-  <p>Location: <span itemprop="location">San Francisco, CA</span></p>
-</div>
-    
-</body>
+    <!-- for events website -->
+    <div itemscope itemtype="https://schema.org/Event">
+      <h2 itemprop="name">Tech Conference 2024</h2>
+      <p>
+        Date:
+        <time itemprop="startDate" datetime="2024-05-01T08:00"
+          >May 1, 2024</time
+        >
+      </p>
+      <p>Location: <span itemprop="location">San Francisco, CA</span></p>
+    </div>
+  </body>
 </html>

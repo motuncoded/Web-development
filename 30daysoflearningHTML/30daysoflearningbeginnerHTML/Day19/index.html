@@ -1,40 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Attributes</title>
-</head>
-<body>
+  </head>
+  <body>
     <div data-name="John Doe" data-age="30">Hello, John Doe!</div>
-<ul>
-  <li data-id="101" data-price="29.99" data-available="true">Product 1</li>
-  <li data-id="102" data-price="49.99" data-available="false">Product 2</li>
-  <li data-id="103" data-price="19.99" data-available="true">Product 3</li>
-</ul>
-<script>
-    var div = document.querySelector('div[data-name="John Doe"]');
-    console.log(div.getAttribute('data-name'));
+    <ul>
+      <li data-id="101" data-price="29.99" data-available="true">Product 1</li>
+      <li data-id="102" data-price="49.99" data-available="false">Product 2</li>
+      <li data-id="103" data-price="19.99" data-available="true">Product 3</li>
+    </ul>
+    <script>
+      var div = document.querySelector('div[data-name="John Doe"]');
+      console.log(div.getAttribute("data-name"));
 
-const product = document.querySelector("li")
-console.log(product.dataset.id);        // Output: "101"
-console.log(product.dataset.price);     // Output: "29.99"
-console.log(product.dataset.available);
+      const product = document.querySelector("li");
+      console.log(product.dataset.id); // Output: "101"
+      console.log(product.dataset.price); // Output: "29.99"
+      console.log(product.dataset.available);
 
-const button = document.getElementById('toggle');
-  const content = document.getElementById('content');
+      const button = document.getElementById("toggle");
+      const content = document.getElementById("content");
 
-  button.addEventListener('click', () => {
-    if (button.dataset.status === 'hidden') {
-      content.style.display = 'block';
-      button.dataset.status = 'visible';
-      button.textContent = 'Hide Content';
-    } else {
-      content.style.display = 'none';
-      button.dataset.status = 'hidden';
-      button.textContent = 'Show Content';
-    }
-  });
-</script>
-</body>
+      button.addEventListener("click", () => {
+        if (button.dataset.status === "hidden") {
+          content.style.display = "block";
+          button.dataset.status = "visible";
+          button.textContent = "Hide Content";
+        } else {
+          content.style.display = "none";
+          button.dataset.status = "hidden";
+          button.textContent = "Show Content";
+        }
+      });
+    </script>
+  </body>
 </html>

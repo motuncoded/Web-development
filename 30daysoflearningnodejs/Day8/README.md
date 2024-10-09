@@ -5,6 +5,7 @@ Welcome to **Day 7** of your Node.js learning journey! Today, you'll learn how t
 ---
 
 ## 🎯 **Goals for Day 7**
+
 - Understand the concepts of **authentication** and **authorization**.
 - Learn what **JWT (JSON Web Tokens)** are and how they work.
 - Implement user **registration** and **login** functionality.
@@ -16,10 +17,12 @@ Welcome to **Day 7** of your Node.js learning journey! Today, you'll learn how t
 ## 📚 **Understanding Authentication and Authorization**
 
 ### **Authentication vs. Authorization**
+
 - **Authentication**: Verifying the identity of a user. Ensures that the user is who they claim to be.
 - **Authorization**: Determining what an authenticated user is allowed to do. Controls access to resources based on user roles or permissions.
 
 ### **Why Use JWT?**
+
 - **Stateless**: JWTs are self-contained and do not require server-side sessions.
 - **Secure**: Can be signed and encrypted to ensure data integrity and confidentiality.
 - **Scalable**: Suitable for distributed systems where maintaining sessions can be challenging.
@@ -29,12 +32,14 @@ Welcome to **Day 7** of your Node.js learning journey! Today, you'll learn how t
 ## 🛠 **Step-by-Step Guide to Implementing JWT Authentication**
 
 ### 🧰 **Prerequisites**
+
 - Completed **Day 6**: Building a RESTful API with Express.js.
 - Basic understanding of **Express.js** and **JavaScript**.
 
 ### 📦 **Step 1: Install Required Packages**
 
 You'll need to install a few additional packages to handle authentication:
+
 - **bcrypt**: For hashing passwords.
 - **jsonwebtoken**: For creating and verifying JWTs.
 - **dotenv**: For managing environment variables.
@@ -44,7 +49,9 @@ Run the following command to install these packages:
 ```bash
 npm install bcrypt jsonwebtoken dotenv
 ```
+
 ### 🔐 **Step 2: Set Up Environment Variables**
+
 1. Create a .env file in the root of your project to store sensitive information like your JWT secret key.
 
 ```env
@@ -53,7 +60,9 @@ MONGO_URI=mongodb://localhost:27017/nodeapp
 JWT_SECRET=your_jwt_secret_key
 JWT_EXPIRES_IN=1h
 ```
+
 Note: Replace your_jwt_secret_key with a strong, secure key. Never expose your secret key in public repositories.
+
 - PORT: The port your server will run on.
 - MONGO_URI: Your MongoDB connection string.
 - JWT_SECRET: A secret key for signing JWTs. Ensure this is strong and kept confidential.
@@ -62,37 +71,46 @@ Note: Replace your_jwt_secret_key with a strong, secure key. Never expose your s
 2. Load Environment Variables in your application by adding the following line at the top of your index.js:
 
 ```javascript
-require('dotenv').config();
+require("dotenv").config();
 ```
+
 ### 🛠 Step 3: Update User Schema to Include Password
+
 To handle user authentication, users need to have passwords. Update your User model to include a password field.
 
 ```javascript
 // models/User.js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true,
+      type: String,
+      required: true,
+      unique: true,
     },
-    password: { // New field
-        type: String,
-        required: true,
+    password: {
+      // New field
+      type: String,
+      required: true,
     },
-}, { timestamps: true });
+  },
+  { timestamps: true },
+);
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model("User", UserSchema);
 ```
+
 ### 🛠 Step 4: Implement User Registration and Login Routes
+
 1. User Registration (Sign Up)
-Route: POST /auth/register
-Purpose: Allow new users to create an account by providing name, email, and password.
+   Route: POST /auth/register
+   Purpose: Allow new users to create an account by providing name, email, and password.
+
 ```javascript
 // index.js (or routes/auth.js if using separate routes)
 const express = require('express');
@@ -536,3 +554,4 @@ app.post('/auth/register', async (req, res) => {
 });
 
 
+```

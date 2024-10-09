@@ -1,38 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header role="banner">
-  <h1>My Website</h1>
-</header>
-<nav role="navigation">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</nav>
-<main role="main">
-  <h2>Welcome to My Website</h2>
-</main>
-<footer role="contentinfo">
-  <p>© 2024 My Website</p>
-</footer>
+      <h1>My Website</h1>
+    </header>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <main role="main">
+      <h2>Welcome to My Website</h2>
+    </main>
+    <footer role="contentinfo">
+      <p>© 2024 My Website</p>
+    </footer>
     <button role="button" aria-pressed="false">Toggle</button>
-<button aria-label="Close" onclick="closeModal()">×</button>
+    <button aria-label="Close" onclick="closeModal()">×</button>
 
-<h2 id="dialogTitle">Dialog Title</h2>
-<div role="dialog" aria-labelledby="dialogTitle">
-  <!-- Dialog content -->
-</div>
-<input type="checkbox" aria-checked="false" onclick="toggleCheckbox(this)">
+    <h2 id="dialogTitle">Dialog Title</h2>
+    <div role="dialog" aria-labelledby="dialogTitle">
+      <!-- Dialog content -->
+    </div>
+    <input
+      type="checkbox"
+      aria-checked="false"
+      onclick="toggleCheckbox(this)"
+    />
 
-<button aria-expanded="false" onclick="toggleMenu()">Menu</button>
-
-
-
-</body>
+    <button aria-expanded="false" onclick="toggleMenu()">Menu</button>
+  </body>
 </html>

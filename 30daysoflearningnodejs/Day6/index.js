@@ -1,16 +1,15 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Helo node nodemon app")
-})
+  res.send("Helo node nodemon app");
+});
 app.listen(3000, () => {
-    console.log("Server is running in 3000 ");
-})
+  console.log("Server is running in 3000 ");
+});
 
 mongoose
   .connect(

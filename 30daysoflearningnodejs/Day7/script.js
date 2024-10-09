@@ -2,30 +2,27 @@ const mongoose = require("mongoose");
 const express = require("express");
 const Product = require("./models/Product");
 
-
 const app = express();
-app.use(express.json())
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Helo node nodemon app");
 });
 app.get("/api/products", async (req, res) => {
-try {
-    const findProduct = await Product.find(req.body)
+  try {
+    const findProduct = await Product.find(req.body);
     res.status(200).json(findProduct);
-
-    } catch (error) {
+  } catch (error) {
     res.status(500).json({ message: error.message });
-    }});
+  }
+});
 app.post("/api/products", async (req, res) => {
-    try {
-    const newProduct = await Product.create(req.body)
+  try {
+    const newProduct = await Product.create(req.body);
     res.status(200).json(newProduct);
-
-    } catch (error) {
+  } catch (error) {
     res.status(500).json({ message: error.message });
-    }
-
+  }
 });
 
 app.listen(3000, () => {
