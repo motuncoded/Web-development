@@ -55,12 +55,13 @@ users
 ## 4. Form Submission Methods
 - GET: Appends form data to the URL, generally used for data retrieval.
 Example: example.com/form?name=John&email=john@example.com
-POST: Sends the data as part of the request body, typically used when the data is more sensitive or involves changes (like creating or updating a record).
-5. Activity: Create a Simple HTML Form
+- POST: Sends the data as part of the request body, typically used when the data is more sensitive or involves changes (like creating or updating a record).
+
+## 5. Activity: Create a Simple HTML Form
 Task:
 Create an HTML page that contains a form with the following fields:
-Name: A text input for the user’s name.
-Email: An input for the user's email address.
-Message: A text area where the user can leave a message.
-Submit: A button to submit the form.
+- Name: A text input for the user’s name.
+- Email: An input for the user's email address.
+- Message: A text area where the user can leave a message.
+- Submit: A button to submit the form.
 By the end of the day, you'll have a working form that collects user input!
