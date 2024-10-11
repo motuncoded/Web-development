@@ -1,30 +1,30 @@
-### **Day 4: Labels and Accessibility**
+# Day 4: Labels and Accessibility
 
-- **Goal:** Understand the importance of using `<label>` elements in forms and how they improve accessibility.
-- **Activity:** Create a form using proper labels and explore ways to enhance form accessibility.
+- Goal: Understand the importance of using `<label>` elements in forms and how they improve accessibility.
+- Activity:Create a form using proper labels and explore ways to enhance form accessibility.
 
 ---
 
-## **1. Introduction to the `<label>` Element**
+## 1. Introduction to the `<label>` Element
 
 The `<label>` element in HTML is used to provide a clear description or caption for form controls, such as text fields, checkboxes, and radio buttons. Labels are crucial for accessibility because they help screen readers identify the purpose of each input field. When labels are properly associated with form elements, they make forms easier to understand and navigate, especially for users with disabilities.
 
 ---
 
-## **2. Why Labels Are Important for Accessibility**
+## 2. Why Labels Are Important for Accessibility**
 
-- **Screen Readers**: When labels are correctly used, screen readers can announce the label when the user focuses on the input field.
-- **Click Area**: Labels provide a larger click area for input elements. Clicking on a label associated with an input field activates the input, improving usability.
-- **Clarity**: Labels help clarify what input is expected from the user, reducing errors and confusion.
+- Screen Readers: When labels are correctly used, screen readers can announce the label when the user focuses on the input field.
+- Click Area: Labels provide a larger click area for input elements. Clicking on a label associated with an input field activates the input, improving usability.
+- Clarity: Labels help clarify what input is expected from the user, reducing errors and confusion.
 
-### **Associating a Label with an Input Field**
+### Associating a Label with an Input Field
 You can associate a `<label>` with an input element in two ways:
-- **Using the `for` Attribute**: The `for` attribute in the label should match the `id` of the input element.
-- **Wrapping the Input**: You can wrap the input element directly within the label tag.
+- Using the `for` Attribute: The `for` attribute in the label should match the `id` of the input element.
+- Wrapping the Input: You can wrap the input element directly within the label tag.
 
 ---
 
-## **3. Example of Labels with `for` Attribute**
+## 3. Example of Labels with `for` Attribute
 
 The `for` attribute associates the label with a specific input field by matching the `for` value with the `id` of the input.
 
@@ -61,7 +61,7 @@ The `for` attribute associates the label with a specific input field by matching
 
 ---
 
-## **4. Example of Wrapping the Input in the `<label>`**
+## 4. Example of Wrapping the Input in the `<label>`
 
 Another method to associate a label with an input field is to wrap the input inside the `<label>` element.
 
@@ -86,16 +86,16 @@ Another method to associate a label with an input field is to wrap the input ins
 </form>
 ```
 
-### **Explanation:**
+### Explanation:
 - The input fields are wrapped inside the `<label>` element, so they are automatically associated with their respective labels.
 
 ---
 
-## **5. ARIA Attributes for Accessibility**
+## 5. ARIA Attributes for Accessibility
 
 While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attributes can enhance the accessibility of form elements for users who rely on assistive technologies.
 
-### **Common ARIA Attributes for Forms:**
+### Common ARIA Attributes for Forms:
 
 - **`aria-labelledby`**: Specifies the ID of another element that labels the input (useful when labels are more complex).
   
@@ -121,13 +121,13 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 </form>
 ```
 
-### **Explanation:**
+### Explanation:
 - The `aria-labelledby` attribute references the label by its ID.
 - `aria-required="true"` is used to explicitly declare the field as required to assistive technologies.
 
 ---
 
-## **6. Best Practices for Accessible Forms**
+## 6. Best Practices for Accessible Forms
 
 - **Always Use Labels**: Never omit labels for form fields. Even if the form visually appears clear, labels are essential for screen readers.
 - **Associate Labels Properly**: Ensure that each input has a label using either the `for` attribute or by wrapping the input.
