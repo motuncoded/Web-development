@@ -5,6 +5,7 @@ Today, you will explore how to use and customize select dropdowns. Dropdowns all
 ---
 
 #### Goals for Day 9:
+
 - Learn the HTML structure for select dropdowns.
 - Understand how to group options in a dropdown.
 - Implement ARIA attributes for better accessibility.
@@ -13,6 +14,7 @@ Today, you will explore how to use and customize select dropdowns. Dropdowns all
 ---
 
 #### 1. Select Dropdown Basics
+
 The `<select>` element is used to create a dropdown, and each option is wrapped in an `<option>` tag. Here's the basic structure:
 
 ```html
@@ -27,6 +29,7 @@ The `<select>` element is used to create a dropdown, and each option is wrapped 
 ```
 
 #### 2. Grouping Options
+
 You can group related options using the `<optgroup>` element to make the dropdown more organized.
 
 Example:
@@ -48,6 +51,7 @@ Example:
 ```
 
 #### 3. Accessibility with ARIA
+
 To ensure dropdowns are accessible, ARIA attributes can enhance the experience for screen readers:
 
 - **`aria-expanded`**: Indicates whether the dropdown is currently open.
@@ -59,7 +63,12 @@ Example:
 ```html
 <form>
   <label id="color-label" for="color">Choose a color:</label>
-  <select id="color" name="color" aria-labelledby="color-label" aria-expanded="false">
+  <select
+    id="color"
+    name="color"
+    aria-labelledby="color-label"
+    aria-expanded="false"
+  >
     <option value="red">Red</option>
     <option value="green">Green</option>
     <option value="blue">Blue</option>
@@ -68,6 +77,7 @@ Example:
 ```
 
 #### 4. Customizing Dropdowns with CSS
+
 The default appearance of dropdowns can vary between browsers, but CSS can be used to customize the look.
 
 Example:
@@ -94,6 +104,7 @@ option {
 ---
 
 #### Task for Today:
+
 1. Create a form with a dropdown menu (e.g., select your favorite fruit, preferred programming language).
 2. Use ARIA attributes to improve accessibility.
 3. Customize the dropdown appearance using CSS to match your design system.

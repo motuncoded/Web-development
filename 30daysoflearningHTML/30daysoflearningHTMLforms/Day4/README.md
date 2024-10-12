@@ -11,14 +11,16 @@ The `<label>` element in HTML is used to provide a clear description or caption 
 
 ---
 
-## 2. Why Labels Are Important for Accessibility**
+## 2. Why Labels Are Important for Accessibility\*\*
 
 - Screen Readers: When labels are correctly used, screen readers can announce the label when the user focuses on the input field.
 - Click Area: Labels provide a larger click area for input elements. Clicking on a label associated with an input field activates the input, improving usability.
 - Clarity: Labels help clarify what input is expected from the user, reducing errors and confusion.
 
 ### Associating a Label with an Input Field
+
 You can associate a `<label>` with an input element in two ways:
+
 - Using the `for` Attribute: The `for` attribute in the label should match the `id` of the input element.
 - Wrapping the Input: You can wrap the input element directly within the label tag.
 
@@ -29,33 +31,34 @@ You can associate a `<label>` with an input element in two ways:
 The `for` attribute associates the label with a specific input field by matching the `for` value with the `id` of the input.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form with Labels</title>
-</head>
-<body>
-  <h1>Accessible Form</h1>
-  
-  <form action="/submit" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Labels</title>
+  </head>
+  <body>
+    <h1>Accessible Form</h1>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
+    <form action="/submit" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required /><br />
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br />
 
-    <button type="submit">Submit</button>
-  </form>
-</body>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
 ```
 
 ### **Explanation:**
+
 - The `for` attribute of the `<label>` is set to the `id` of the corresponding input (`id="username"`, `id="email"`, `id="password"`).
 - When the user clicks on the label, the focus automatically moves to the corresponding input field.
 
@@ -69,24 +72,25 @@ Another method to associate a label with an input field is to wrap the input ins
 <form action="/submit" method="POST">
   <label>
     Username:
-    <input type="text" name="username" required>
-  </label><br>
+    <input type="text" name="username" required /> </label
+  ><br />
 
   <label>
     Email:
-    <input type="email" name="email" required>
-  </label><br>
+    <input type="email" name="email" required /> </label
+  ><br />
 
   <label>
     Password:
-    <input type="password" name="password" required>
-  </label><br>
+    <input type="password" name="password" required /> </label
+  ><br />
 
   <button type="submit">Submit</button>
 </form>
 ```
 
 ### Explanation:
+
 - The input fields are wrapped inside the `<label>` element, so they are automatically associated with their respective labels.
 
 ---
@@ -98,9 +102,7 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 ### Common ARIA Attributes for Forms:
 
 - **`aria-labelledby`**: Specifies the ID of another element that labels the input (useful when labels are more complex).
-  
 - **`aria-describedby`**: Specifies the ID of an element that provides additional information about the input (e.g., hints or error messages).
-  
 - **`aria-required`**: Marks an input as required for users who may not see the visual indicator.
 
 ### **Example Using ARIA:**
@@ -109,12 +111,26 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 <form action="/submit" method="POST">
   <div>
     <label id="username-label" for="username">Username:</label>
-    <input type="text" id="username" name="username" aria-required="true" aria-labelledby="username-label" required>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      aria-required="true"
+      aria-labelledby="username-label"
+      required
+    />
   </div>
 
   <div>
     <label id="email-label" for="email">Email:</label>
-    <input type="email" id="email" name="email" aria-required="true" aria-labelledby="email-label" required>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      aria-required="true"
+      aria-labelledby="email-label"
+      required
+    />
   </div>
 
   <button type="submit">Submit</button>
@@ -122,6 +138,7 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 ```
 
 ### Explanation:
+
 - The `aria-labelledby` attribute references the label by its ID.
 - `aria-required="true"` is used to explicitly declare the field as required to assistive technologies.
 
@@ -140,6 +157,7 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 ## **7. Activity: Build an Accessible Form**
 
 ### **Task:**
+
 - Create a form that collects the user's **name**, **email**, and **password**.
 - Ensure each input field has a label.
 - Use ARIA attributes to enhance accessibility, especially for error messages and additional descriptions.
@@ -149,41 +167,63 @@ While `<label>` is essential, ARIA (Accessible Rich Internet Applications) attri
 ### **Sample Form:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessible Form Example</title>
-</head>
-<body>
-  <h1>Registration Form</h1>
-  
-  <form action="/submit" method="POST">
-    <div>
-      <label id="name-label" for="name">Name:</label>
-      <input type="text" id="name" name="name" aria-labelledby="name-label" aria-required="true" required>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form Example</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
 
-    <div>
-      <label id="email-label" for="email">Email:</label>
-      <input type="email" id="email" name="email" aria-labelledby="email-label" aria-required="true" required>
-    </div>
+    <form action="/submit" method="POST">
+      <div>
+        <label id="name-label" for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          aria-labelledby="name-label"
+          aria-required="true"
+          required
+        />
+      </div>
 
-    <div>
-      <label id="password-label" for="password">Password:</label>
-      <input type="password" id="password" name="password" aria-labelledby="password-label" aria-required="true" required>
-    </div>
+      <div>
+        <label id="email-label" for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          aria-labelledby="email-label"
+          aria-required="true"
+          required
+        />
+      </div>
 
-    <button type="submit">Register</button>
-  </form>
-</body>
+      <div>
+        <label id="password-label" for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          aria-labelledby="password-label"
+          aria-required="true"
+          required
+        />
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
 </html>
 ```
 
 ---
 
 ### **Next Steps:**
+
 - Try adding validation error messages and associate them with form inputs using `aria-describedby`.
 - Explore other ARIA attributes to improve form usability for all users.
 

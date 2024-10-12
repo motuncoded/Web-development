@@ -5,6 +5,7 @@ Today, you will explore how to use date and time inputs in forms. HTML5 introduc
 ---
 
 #### Goals for Day 15:
+
 - Learn how to use different date and time input types.
 - Understand built-in validation and browser support for date and time inputs.
 - Style date and time inputs for better user experience.
@@ -30,21 +31,21 @@ Example:
 ```html
 <form>
   <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
+  <input type="date" id="birthday" name="birthday" />
 
   <label for="meeting-time">Meeting Time:</label>
-  <input type="time" id="meeting-time" name="meeting-time">
+  <input type="time" id="meeting-time" name="meeting-time" />
 
   <label for="appointment">Appointment (Date and Time):</label>
-  <input type="datetime-local" id="appointment" name="appointment">
+  <input type="datetime-local" id="appointment" name="appointment" />
 
   <label for="birth-month">Birth Month:</label>
-  <input type="month" id="birth-month" name="birth-month">
+  <input type="month" id="birth-month" name="birth-month" />
 
   <label for="week">Week of the Year:</label>
-  <input type="week" id="week" name="week">
+  <input type="week" id="week" name="week" />
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -53,17 +54,17 @@ Example:
 HTML5 date and time inputs include built-in validation. For example, if you try to submit a form with an invalid date (e.g., a date in the wrong format), the browser will display an error message.
 
 - **Required Field**: You can make a date or time field required using the `required` attribute.
-  
+
   ```html
-  <input type="date" name="start-date" required>
+  <input type="date" name="start-date" required />
   ```
 
 - **Min and Max Values**: You can restrict date and time inputs by specifying a minimum (`min`) and maximum (`max`) value.
 
   Example for restricting a date input to a specific range:
-  
+
   ```html
-  <input type="date" name="event-date" min="2024-01-01" max="2024-12-31">
+  <input type="date" name="event-date" min="2024-01-01" max="2024-12-31" />
   ```
 
 - **Pattern and Step**: For more control, you can use the `pattern` attribute (to enforce a specific format) or `step` (to define intervals for time input).
@@ -77,7 +78,11 @@ While the appearance of date and time inputs varies between browsers, you can st
 Example:
 
 ```css
-input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"] {
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
   padding: 10px;
   font-size: 1em;
   border-radius: 5px;
@@ -85,7 +90,8 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   margin-bottom: 10px;
 }
 
-input[type="date"]:focus, input[type="time"]:focus {
+input[type="date"]:focus,
+input[type="time"]:focus {
   outline: none;
   border-color: #4caf50; /* Accent color for focus */
 }
@@ -96,16 +102,21 @@ input[type="date"]:focus, input[type="time"]:focus {
 Date and time inputs are generally accessible, but you can enhance their usability with the following best practices:
 
 - **Labels**: Always associate date and time inputs with appropriate labels for clarity.
-  
+
   ```html
   <label for="meeting-time">Meeting Time:</label>
-  <input type="time" id="meeting-time" name="meeting-time">
+  <input type="time" id="meeting-time" name="meeting-time" />
   ```
 
 - **Placeholder Text and Descriptions**: Use placeholder text or `aria-describedby` to provide additional guidance on input formats, especially if using custom formats.
 
   ```html
-  <input type="date" id="start-date" name="start-date" aria-describedby="date-format">
+  <input
+    type="date"
+    id="start-date"
+    name="start-date"
+    aria-describedby="date-format"
+  />
   <small id="date-format">Format: YYYY-MM-DD</small>
   ```
 
@@ -119,13 +130,14 @@ Example of setting the current date as the default value:
 
 ```html
 <script>
-  document.getElementById('birthday').valueAsDate = new Date();
+  document.getElementById("birthday").valueAsDate = new Date();
 </script>
 ```
 
 ---
 
 #### Task for Today:
+
 1. Create a form that uses a variety of date and time inputs (e.g., date, time, datetime-local, month, and week).
 2. Implement validation using the `min` and `max` attributes.
 3. Style the date and time inputs using CSS.

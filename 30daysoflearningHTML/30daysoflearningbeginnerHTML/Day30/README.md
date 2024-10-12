@@ -5,6 +5,7 @@ The final step in your journey of learning HTML is to build and deploy a complet
 ## 1. Building Your Web Page
 
 ### a. Project Structure
+
 Start by organizing your project folder. A typical folder structure for a simple web page might look like this:
 
 ```bash
@@ -19,7 +20,9 @@ Copy code
 ```
 
 index.html
+
 ### b. HTML Structure (index.html)
+
 Here’s a basic HTML page that combines what you’ve learned:
 
 ```html
