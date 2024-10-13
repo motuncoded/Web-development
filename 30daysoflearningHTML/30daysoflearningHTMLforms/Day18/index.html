@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>placeholder</title>
+</head>
+<body>
+    <form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" placeholder="Enter your password">
+  
+  <input type="submit" value="Submit">
+    </form>
+
+    <form>
+  <label for="country">Country:</label>
+  <select id="country" name="country" onchange="updatePlaceholder()">
+    <option value="us">United States</option>
+    <option value="uk">United Kingdom</option>
+    <option value="fr">France</option>
+  </select>
+
+  <label for="phone">Phone Number:</label>
+  <input type="text" id="phone" name="phone" placeholder="(555) 555-5555">
+  
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function updatePlaceholder() {
+    const country = document.getElementById('country').value;
+    const phoneInput = document.getElementById('phone');
+
+    if (country === 'us') {
+      phoneInput.placeholder = '(555) 555-5555';
+    } else if (country === 'uk') {
+      phoneInput.placeholder = '07123 456789';
+    } else if (country === 'fr') {
+      phoneInput.placeholder = '01 23 45 67 89';
+    }
+  }
+</script>
+</body>
+</html>

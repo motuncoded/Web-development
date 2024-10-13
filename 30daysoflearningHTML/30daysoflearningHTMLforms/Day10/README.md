@@ -1,4 +1,4 @@
-### Day 10: File Uploads
+# Day 10: File Uploads
 
 Today, we will focus on implementing file upload inputs, which allow users to select and upload files from their device. This type of input is commonly used in forms for uploading documents, images, or other media. As with other form elements, accessibility remains crucial, so you’ll learn how to apply ARIA attributes to file upload inputs.
 
@@ -13,7 +13,7 @@ Today, we will focus on implementing file upload inputs, which allow users to se
 
 ---
 
-#### 1. File Upload Input Basics
+## 1. File Upload Input Basics
 
 The `<input type="file">` element is used to create a file upload field. Here's the basic structure:
 
@@ -24,7 +24,7 @@ The `<input type="file">` element is used to create a file upload field. Here's 
 </form>
 ```
 
-#### 2. Accepting Specific File Types
+## 2. Accepting Specific File Types
 
 To limit the file types a user can upload, you can use the `accept` attribute. This ensures that only files with specific extensions or MIME types are selectable.
 
@@ -51,7 +51,7 @@ Example for accepting specific document types (e.g., PDF and DOCX):
 </form>
 ```
 
-#### 3. Accessibility with ARIA
+## 3. Accessibility with ARIA
 
 To make file inputs more accessible, use ARIA attributes to describe the file input and provide better feedback for assistive technologies:
 
@@ -74,7 +74,7 @@ Example:
 </form>
 ```
 
-#### 4. Customizing File Inputs with CSS
+## 4. Customizing File Inputs with CSS
 
 The default file input is difficult to style directly, but you can hide the default input and use a custom button with some CSS tricks.
 

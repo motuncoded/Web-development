@@ -1,10 +1,10 @@
-### Day 12: Submit Buttons
+# Day 12: Submit Buttons
 
 Today, you will focus on submit buttons, which are an essential part of any form, allowing users to submit the form data for processing. You will explore the different types of submit buttons, how to style and customize them, and how to make them accessible using ARIA attributes.
 
 ---
 
-#### Goals for Day 12:
+### Goals for Day 12:
 
 - Learn the basic HTML structure for submit buttons.
 - Understand how to customize the button’s text and behavior.
@@ -14,7 +14,7 @@ Today, you will focus on submit buttons, which are an essential part of any form
 
 ---
 
-#### 1. Submit Button Basics
+## 1. Submit Button Basics
 
 A submit button is created using the `<input type="submit">` or `<button type="submit">` elements. When clicked, it triggers the form submission. Here's the basic structure using both methods:
 
@@ -34,7 +34,7 @@ Using `<button>`:
 </form>
 ```
 
-#### 2. Customizing the Submit Button
+## 2. Customizing the Submit Button
 
 You can customize the button’s text or add icons within it, especially if you use the `<button>` element.
 
@@ -50,14 +50,14 @@ Example:
 
 The `<button>` element is more flexible because it allows for HTML content inside the button, such as text, icons, or even styling.
 
-#### 3. Types of Submit Buttons
+## 3. Types of Submit Buttons
 
 Both `<input type="submit">` and `<button type="submit">` have their use cases, but `<button>` is generally more flexible since it allows more control over the content inside the button (e.g., text and images).
 
 - **`<input type="submit">`**: Simpler, but limited to text inside the button.
 - **`<button type="submit">`**: More customizable, can include HTML elements inside (like images or icons).
 
-#### 4. Accessibility with ARIA
+## 4. Accessibility with ARIA
 
 Submit buttons should be properly labeled and easy to understand for users relying on assistive technologies.
 
@@ -74,7 +74,7 @@ Example:
 </form>
 ```
 
-#### 5. Styling Submit Buttons with CSS
+## 5. Styling Submit Buttons with CSS
 
 You can customize the look of the submit button using CSS. For instance, you can change its background color, border, and hover effects.
 
@@ -102,7 +102,7 @@ button[type="submit"]:disabled {
 
 ---
 
-#### 6. Enhancing with JavaScript
+## 6. Enhancing with JavaScript
 
 You can further enhance submit buttons by using JavaScript to trigger actions when clicked. For example, you might want to disable the button after a click to prevent multiple submissions or change the text to show a loading state.
 

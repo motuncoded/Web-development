@@ -8,17 +8,43 @@
   <body>
     <h1>Signup Form</h1>
 
-    <form action="/register" method="POST">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required />
+     <form action="/register" method="POST" aria-labelledby="registration-form">
+    <h2 id="registration-form">Register</h2>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+    <!-- Name Input -->
+    <label for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your name" 
+      required 
+      aria-required="true">
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required />
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email" 
+      required 
+      aria-required="true">
 
-      <button type="submit">Submit</button>
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Enter a password" 
+      required 
+      aria-required="true">
+
+    <!-- Submit Button -->
+    <input type="submit" value="Register">
+
+  </form>
     </form>
   </body>
 </html>

@@ -94,33 +94,5 @@ Create an HTML form with the following features:
 Collect the user’s name, email, and a password.
 Submit the form data using the POST method to a fictional URL /register.
 Use the required attribute to ensure all fields are filled before submission.
-Sample Form:
-html
-Copy code
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
-</head>
-<body>
-  <h1>Register for Our Service</h1>
-  
-  <form action="/register" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    
-    <button type="submit">Register</button>
-  </form>
-</body>
-</html>
-```
-This form will send the data to /register when submitted.
+

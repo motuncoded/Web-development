@@ -213,7 +213,4 @@ Create a form that uses at least 5 different input types.
 The form should include fields for a name, email, password, age, and favorite color.
 Experiment with radio buttons and checkboxes to allow multiple choice selection.
 
-Next Steps:
-Add validation attributes (e.g., required, min, max) to make your form more user-friendly.
-Style your form using CSS to make it more visually appealing.
-Learn about advanced input types like tel, url, and datetime-local.
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <button type="submit"  id="hire-button aria-label="hire-button" >
+            <span id="text" aria-labelledby="hire-button">hire me</span>
+        </button>
+    </form>
+
+
+<script>
+  const form = document.getElementById("myForm");
+  const hireButton = document.getElementById("hire-button");
+  const text = document.getElementById("text");
+
+  form.addEventListener("click", function () {
+    text.textContent = "Hired!";
+  });
+</script>
+</body>
+
+</html>

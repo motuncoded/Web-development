@@ -207,7 +207,7 @@ You can also use CSS to style and control the size of the `<textarea>` beyond th
 
 ---
 
-## **6. Advanced Usage: Dynamic Resizing with JavaScript**
+## 6. Advanced Usage: Dynamic Resizing with JavaScript
 
 You can also allow the `<textarea>` to dynamically resize based on the user's input. This can be done using JavaScript.
 
@@ -240,7 +240,7 @@ You can also allow the `<textarea>` to dynamically resize based on the user's in
 
 ---
 
-## **7. Best Practices for Using `<textarea>`**
+## 7. Best Practices for Using `<textarea>`
 
 - **Use Placeholders**: Provide clear guidance with placeholder text for better user experience.
 - **Set Appropriate Sizes**: Customize the size of your `<textarea>` to suit the context of its use.

@@ -1,4 +1,4 @@
-### Day 9: Select Dropdowns
+# Day 9: Select Dropdowns
 
 Today, you will explore how to use and customize select dropdowns. Dropdowns allow users to choose from a list of options, and they are particularly useful when space is limited. We will focus on the basic structure, accessibility through ARIA attributes, and customization using CSS.
 
@@ -13,7 +13,7 @@ Today, you will explore how to use and customize select dropdowns. Dropdowns all
 
 ---
 
-#### 1. Select Dropdown Basics
+## 1. Select Dropdown Basics
 
 The `<select>` element is used to create a dropdown, and each option is wrapped in an `<option>` tag. Here's the basic structure:
 
@@ -28,7 +28,7 @@ The `<select>` element is used to create a dropdown, and each option is wrapped 
 </form>
 ```
 
-#### 2. Grouping Options
+## 2. Grouping Options
 
 You can group related options using the `<optgroup>` element to make the dropdown more organized.
 

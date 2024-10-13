@@ -8,44 +8,54 @@
   <body>
     <h1>Registration Form</h1>
 
-    <form action="/submit" method="POST">
-      <div>
-        <label id="name-label" for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          aria-labelledby="name-label"
-          aria-required="true"
-          required
-        />
-      </div>
+   <form action="/submit" method="POST" aria-labelledby="form-heading">
+    <h2 id="form-heading">Registration Form</h2>
 
-      <div>
-        <label id="email-label" for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          aria-labelledby="email-label"
-          aria-required="true"
-          required
-        />
-      </div>
+    <!-- Name Input with ARIA -->
+    <label for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your name" 
+      required 
+      aria-required="true"
+      aria-describedby="name-desc"
+      aria-invalid="false">
+    <div id="name-desc">Please enter your full name.</div>
 
-      <div>
-        <label id="password-label" for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          aria-labelledby="password-label"
-          aria-required="true"
-          required
-        />
-      </div>
+    <!-- Email Input with ARIA -->
+    <label for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email" 
+      required 
+      aria-required="true"
+      aria-describedby="email-desc"
+      aria-invalid="false">
+    <div id="email-desc">Your email must be in a valid format (e.g., name@example.com).</div>
 
-      <button type="submit">Register</button>
-    </form>
+    <!-- Password Input with ARIA -->
+    <label for="password">Password:</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Create a password" 
+      required 
+      aria-required="true"
+      aria-describedby="password-desc"
+      aria-invalid="false">
+    <div id="password-desc">Password should be at least 8 characters long.</div>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Register">
+
+    <!-- Error messages (for JavaScript error handling, if needed) -->
+    <div id="error-message" class="error" aria-live="polite"></div>
+  </form>
+
   </body>
 </html>

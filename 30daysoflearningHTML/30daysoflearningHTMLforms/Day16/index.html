@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color input</title>
+</head>
+<body>
+    <form>
+  <label for="favcolor">Choose your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+  <input type="submit" value="Submit">
+
+  <!-- with ARIA -->
+
+  <label for="favcolor">Favorite Color:</label>
+<input type="color" id="favcolor" name="favcolor" aria-describedby="color-help">
+<small id="color-help">Pick your favorite color for personalization</small>
+</form>
+</body>
+</html>

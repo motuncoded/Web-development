@@ -1,10 +1,10 @@
-### Day 15: Date and Time Inputs
+# Day 15: Date and Time Inputs
 
 Today, you will explore how to use date and time inputs in forms. HTML5 introduced several new input types to handle dates and times, such as `<input type="date">`, `<input type="time">`, `<input type="datetime-local">`, and others. These input types offer built-in validation and user-friendly interfaces for selecting dates and times, and they enhance accessibility when implemented properly.
 
 ---
 
-#### Goals for Day 15:
+### Goals for Day 15:
 
 - Learn how to use different date and time input types.
 - Understand built-in validation and browser support for date and time inputs.
@@ -13,7 +13,7 @@ Today, you will explore how to use date and time inputs in forms. HTML5 introduc
 
 ---
 
-#### 1. Date and Time Input Types
+## 1. Date and Time Input Types
 
 HTML5 provides several input types for handling date and time information. These input types automatically include validation and UI controls for users to interact with (e.g., a calendar for dates, a clock for times).
 
@@ -49,7 +49,7 @@ Example:
 </form>
 ```
 
-#### 2. Built-in Validation and Browser Support
+## 2. Built-in Validation and Browser Support
 
 HTML5 date and time inputs include built-in validation. For example, if you try to submit a form with an invalid date (e.g., a date in the wrong format), the browser will display an error message.
 
@@ -71,7 +71,7 @@ HTML5 date and time inputs include built-in validation. For example, if you try 
 
 While modern browsers support these input types, some older browsers may not. For unsupported browsers, you may want to provide a fallback, such as a JavaScript date picker library (e.g., jQuery UI Datepicker).
 
-#### 3. Styling Date and Time Inputs
+## 3. Styling Date and Time Inputs
 
 While the appearance of date and time inputs varies between browsers, you can still apply basic styling such as font size, color, padding, and margins. However, styling the inner UI (like the calendar or clock popup) is browser-dependent and not directly customizable with CSS.
 
@@ -97,7 +97,7 @@ input[type="time"]:focus {
 }
 ```
 
-#### 4. Accessibility Considerations
+## 4. Accessibility Considerations
 
 Date and time inputs are generally accessible, but you can enhance their usability with the following best practices:
 
@@ -122,7 +122,7 @@ Date and time inputs are generally accessible, but you can enhance their usabili
 
 - **Error Handling**: If using custom validation with JavaScript, ensure that error messages are accessible by associating them with the form fields.
 
-#### 5. Enhancing Date and Time Inputs with JavaScript (Optional)
+## 5. Enhancing Date and Time Inputs with JavaScript (Optional)
 
 If you need to enhance the date or time input functionality, you can use JavaScript to interact with these fields. For example, you can automatically set a default date or time, or validate the input before form submission.
 
@@ -136,7 +136,7 @@ Example of setting the current date as the default value:
 
 ---
 
-#### Task for Today:
+### Task for Today:
 
 1. Create a form that uses a variety of date and time inputs (e.g., date, time, datetime-local, month, and week).
 2. Implement validation using the `min` and `max` attributes.
