@@ -9,8 +9,20 @@
     <form action="/submit-form" method="POST">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username">
-  
+
   <input type="submit" value="Submit">
 </form>
+<!-- for uploading the enctype must be used -->
+ <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" name="file">
+    <input type="submit" value="Upload">
+  </form>
+
+  <form action="/submit" method="POST" target="_blank">
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback"></textarea>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
