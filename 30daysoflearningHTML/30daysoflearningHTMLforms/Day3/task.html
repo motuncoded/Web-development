@@ -6,148 +6,152 @@
     <title>Multi-Input Form</title>
   </head>
   <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Input Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-    .multiple-choice {
-      margin-bottom: 20px;
-    }
-    .multiple-choice label {
-      font-weight: normal;
-      margin-right: 10px;
-    }
-  </style>
-</head>
-<body>
-  <form action="/submit" method="POST" aria-labelledby="multi-input-form">
-    <h2 id="multi-input-form">User Information Form</h2>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multi-Input Form</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+          }
+          form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+          }
+          h2 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+          }
+          input,
+          select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+          }
+          input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+          input[type="submit"]:hover {
+            background-color: #45a049;
+          }
+          .multiple-choice {
+            margin-bottom: 20px;
+          }
+          .multiple-choice label {
+            font-weight: normal;
+            margin-right: 10px;
+          }
+        </style>
+      </head>
+      <body>
+        <form action="/submit" method="POST" aria-labelledby="multi-input-form">
+          <h2 id="multi-input-form">User Information Form</h2>
 
-    <!-- Name Input (text) -->
-    <label for="name">Name:</label>
-    <input 
-      type="text" 
-      id="name" 
-      name="name" 
-      placeholder="Enter your name" 
-      required 
-      aria-required="true">
+          <!-- Name Input (text) -->
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            aria-required="true"
+          />
 
-    <!-- Email Input (email) -->
-    <label for="email">Email:</label>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      placeholder="Enter your email" 
-      required 
-      aria-required="true">
+          <!-- Email Input (email) -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            aria-required="true"
+          />
 
-    <!-- Password Input (password) -->
-    <label for="password">Password:</label>
-    <input 
-      type="password" 
-      id="password" 
-      name="password" 
-      placeholder="Create a password" 
-      required 
-      aria-required="true">
+          <!-- Password Input (password) -->
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+            aria-required="true"
+          />
 
-    <!-- Age Input (number) -->
-    <label for="age">Age:</label>
-    <input 
-      type="number" 
-      id="age" 
-      name="age" 
-      min="18" 
-      max="100" 
-      placeholder="Enter your age" 
-      required 
-      aria-required="true">
+          <!-- Age Input (number) -->
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="100"
+            placeholder="Enter your age"
+            required
+            aria-required="true"
+          />
 
-    <!-- Favorite Color Input (color) -->
-    <label for="favcolor">Favorite Color:</label>
-    <input 
-      type="color" 
-      id="favcolor" 
-      name="favcolor">
+          <!-- Favorite Color Input (color) -->
+          <label for="favcolor">Favorite Color:</label>
+          <input type="color" id="favcolor" name="favcolor" />
 
-    <!-- Gender Selection (radio buttons) -->
-    <div class="multiple-choice">
-      <label>Gender:</label>
-      <label>
-        <input type="radio" name="gender" value="male" required> Male
-      </label>
-      <label>
-        <input type="radio" name="gender" value="female" required> Female
-      </label>
-      <label>
-        <input type="radio" name="gender" value="other" required> Other
-      </label>
-    </div>
+          <!-- Gender Selection (radio buttons) -->
+          <div class="multiple-choice">
+            <label>Gender:</label>
+            <label>
+              <input type="radio" name="gender" value="male" required /> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" required />
+              Female
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other" required /> Other
+            </label>
+          </div>
 
-    <!-- Interests (checkboxes) -->
-    <div class="multiple-choice">
-      <label>Interests:</label>
-      <label>
-        <input type="checkbox" name="interests" value="coding"> Coding
-      </label>
-      <label>
-        <input type="checkbox" name="interests" value="music"> Music
-      </label>
-      <label>
-        <input type="checkbox" name="interests" value="sports"> Sports
-      </label>
-      <label>
-        <input type="checkbox" name="interests" value="reading"> Reading
-      </label>
-    </div>
+          <!-- Interests (checkboxes) -->
+          <div class="multiple-choice">
+            <label>Interests:</label>
+            <label>
+              <input type="checkbox" name="interests" value="coding" /> Coding
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="music" /> Music
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="sports" /> Sports
+            </label>
+            <label>
+              <input type="checkbox" name="interests" value="reading" /> Reading
+            </label>
+          </div>
 
-    <!-- Submit Button -->
-    <input type="submit" value="Submit">
-
-  </form>
-</body>
+          <!-- Submit Button -->
+          <input type="submit" value="Submit" />
+        </form>
+      </body>
+    </html>
+  </body>
 </html>

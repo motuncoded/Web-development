@@ -5,6 +5,7 @@ On Day 29, you’ll consolidate your learning by building a complete, functional
 ---
 
 #### Goals for Day 29:
+
 - Design a complete form that uses various input types.
 - Implement client-side validation and error handling.
 - Use AJAX to submit the form asynchronously.
@@ -27,45 +28,66 @@ Begin by designing a form that collects relevant user information. For this exam
 **Example: User Registration Form**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Registration</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
     <form id="registrationForm" aria-labelledby="formTitle">
-        <h1 id="formTitle">User Registration</h1>
+      <h1 id="formTitle">User Registration</h1>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-required="true" />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        aria-required="true"
+      />
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required aria-required="true">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        aria-required="true"
+      />
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+        aria-required="true"
+      />
 
-        <label>
-            <input type="checkbox" id="terms" name="terms" required>
-            I accept the terms and conditions
-        </label>
+      <label>
+        <input type="checkbox" id="terms" name="terms" required />
+        I accept the terms and conditions
+      </label>
 
-        <button type="submit">Register</button>
-        <p id="feedbackMessage"></p>
+      <button type="submit">Register</button>
+      <p id="feedbackMessage"></p>
     </form>
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
-</body>
+    <script src="script.js"></script>
+    <!-- Link to your JavaScript file -->
+  </body>
 </html>
 ```
 
 In this example:
+
 - The form is structured with various input fields, labels, and a submit button.
 - Accessibility features such as `aria-labelledby` and `aria-required` are used to enhance usability for screen readers.
 
@@ -78,63 +100,68 @@ Before submitting the form, implement client-side validation to ensure the data 
 **Example: Client-Side Validation in JavaScript**
 
 ```javascript
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document
+  .getElementById("registrationForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default submission
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const termsAccepted = document.getElementById('terms').checked;
-    const feedbackMessage = document.getElementById('feedbackMessage');
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const termsAccepted = document.getElementById("terms").checked;
+    const feedbackMessage = document.getElementById("feedbackMessage");
 
     // Clear previous feedback
-    feedbackMessage.textContent = '';
+    feedbackMessage.textContent = "";
 
     // Validation
     if (!termsAccepted) {
-        feedbackMessage.textContent = 'You must accept the terms and conditions.';
-        return;
+      feedbackMessage.textContent = "You must accept the terms and conditions.";
+      return;
     }
     if (password !== confirmPassword) {
-        feedbackMessage.textContent = 'Passwords do not match.';
-        return;
+      feedbackMessage.textContent = "Passwords do not match.";
+      return;
     }
     if (!validateEmail(email)) {
-        feedbackMessage.textContent = 'Please enter a valid email address.';
-        return;
+      feedbackMessage.textContent = "Please enter a valid email address.";
+      return;
     }
 
     // If validation passes, submit the form
     submitForm(name, email, password);
-});
+  });
 
 function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
 }
 
 function submitForm(name, email, password) {
-    const formData = { name, email, password };
+  const formData = { name, email, password };
 
-    fetch('/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+  fetch("/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("feedbackMessage").textContent =
+        "Registration successful!";
     })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('feedbackMessage').textContent = 'Registration successful!';
-    })
-    .catch(error => {
-        document.getElementById('feedbackMessage').textContent = 'Error during registration.';
+    .catch((error) => {
+      document.getElementById("feedbackMessage").textContent =
+        "Error during registration.";
     });
 }
 ```
 
 In this script:
+
 - The form is validated on submission, checking that the terms are accepted and that the passwords match.
 - The email is validated using a regular expression.
 - If validation passes, the form data is submitted asynchronously via the `fetch` API.
@@ -166,47 +193,47 @@ Add some basic CSS to improve the appearance of your form.
 
 ```css
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
 form {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
+  display: block;
+  margin: 10px 0 5px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #005fcc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 15px;
+  background-color: #005fcc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #004bb5;
+  background-color: #004bb5;
 }
 
 #error-message {
-    color: red;
+  color: red;
 }
 ```
 
@@ -215,6 +242,7 @@ This CSS provides a clean and simple design, enhancing the overall user experien
 ---
 
 #### 6. Task for Today
+
 1. Build a complete user registration form using the provided HTML structure.
 2. Implement client-side validation for all fields.
 3. Use AJAX to submit the form data to a mock or real server endpoint.

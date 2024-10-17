@@ -1,10 +1,12 @@
 ### Day 25: Client-Side Validation with JavaScript
 
-On Day 25, you’ll focus on implementing client-side validation using JavaScript. Client-side validation enhances user experience by providing immediate feedback on user input before the form is submitted to the server. This reduces server load and improves form usability.
+On Day 25, you’ll focus on implementing client-side validation using JavaScript. Client-side validation enhances user experience by providing immediate feedback on user input before the form is
+submitted to the server. This reduces server load and improves form usability.
 
 ---
 
 #### Goals for Day 25:
+
 - Understand the importance of client-side validation.
 - Learn how to implement basic validation rules using JavaScript.
 - Create custom validation functions for specific form fields.
@@ -32,39 +34,43 @@ To get started, you’ll need to select the form elements you want to validate a
 ```html
 <form id="myForm">
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
+  <input type="text" id="username" name="username" required />
   <p id="usernameError" class="error-message"></p>
-  
+
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+  <input type="email" id="email" name="email" required />
   <p id="emailError" class="error-message"></p>
 
   <button type="submit">Submit</button>
 </form>
 
 <script>
-  const form = document.getElementById('myForm');
+  const form = document.getElementById("myForm");
 
-  form.addEventListener('submit', function (event) {
+  form.addEventListener("submit", function (event) {
     let isValid = true;
 
     // Clear previous error messages
-    document.querySelectorAll('.error-message').forEach(message => message.textContent = '');
+    document
+      .querySelectorAll(".error-message")
+      .forEach((message) => (message.textContent = ""));
 
     // Validate username
-    const usernameInput = document.getElementById('username');
-    if (usernameInput.value.trim() === '') {
-      document.getElementById('usernameError').textContent = 'Username is required.';
+    const usernameInput = document.getElementById("username");
+    if (usernameInput.value.trim() === "") {
+      document.getElementById("usernameError").textContent =
+        "Username is required.";
       isValid = false;
     }
 
     // Validate email
-    const emailInput = document.getElementById('email');
-    if (emailInput.value.trim() === '') {
-      document.getElementById('emailError').textContent = 'Email is required.';
+    const emailInput = document.getElementById("email");
+    if (emailInput.value.trim() === "") {
+      document.getElementById("emailError").textContent = "Email is required.";
       isValid = false;
     } else if (!emailInput.validity.valid) {
-      document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+      document.getElementById("emailError").textContent =
+        "Please enter a valid email address.";
       isValid = false;
     }
 
@@ -84,6 +90,7 @@ To get started, you’ll need to select the form elements you want to validate a
 ```
 
 In this example:
+
 - A simple form with username and email fields is created.
 - JavaScript is used to validate inputs when the form is submitted. If validation fails, error messages are displayed.
 
@@ -97,30 +104,33 @@ For more complex validation, you can create custom functions to handle specific 
 
 ```html
 <label for="password">Password:</label>
-<input type="password" id="password" name="password" required>
+<input type="password" id="password" name="password" required />
 <p id="passwordError" class="error-message"></p>
 
 <script>
-  const passwordInput = document.getElementById('password');
-  
-  passwordInput.addEventListener('input', function () {
-    const passwordError = document.getElementById('passwordError');
+  const passwordInput = document.getElementById("password");
+
+  passwordInput.addEventListener("input", function () {
+    const passwordError = document.getElementById("passwordError");
     const password = passwordInput.value;
-    
+
     if (password.length < 8) {
-      passwordError.textContent = 'Password must be at least 8 characters long.';
+      passwordError.textContent =
+        "Password must be at least 8 characters long.";
     } else if (!/[A-Z]/.test(password)) {
-      passwordError.textContent = 'Password must contain at least one uppercase letter.';
+      passwordError.textContent =
+        "Password must contain at least one uppercase letter.";
     } else if (!/[0-9]/.test(password)) {
-      passwordError.textContent = 'Password must contain at least one number.';
+      passwordError.textContent = "Password must contain at least one number.";
     } else {
-      passwordError.textContent = ''; // Clear error message
+      passwordError.textContent = ""; // Clear error message
     }
   });
 </script>
 ```
 
 In this example:
+
 - The password input is validated in real-time as the user types. Specific error messages are displayed based on the validation rules.
 
 ---
@@ -132,13 +142,13 @@ To improve user experience, consider providing real-time feedback as users fill 
 **Example: Real-Time Feedback on Email Input**
 
 ```javascript
-emailInput.addEventListener('input', function () {
-  const emailError = document.getElementById('emailError');
-  
+emailInput.addEventListener("input", function () {
+  const emailError = document.getElementById("emailError");
+
   if (emailInput.validity.valid) {
-    emailError.textContent = ''; // Clear error message
+    emailError.textContent = ""; // Clear error message
   } else {
-    emailError.textContent = 'Please enter a valid email address.';
+    emailError.textContent = "Please enter a valid email address.";
   }
 });
 ```
@@ -155,6 +165,7 @@ emailInput.addEventListener('input', function () {
 ---
 
 #### Task for Today
+
 1. Create a new form or modify an existing one to implement client-side validation using JavaScript.
 2. Implement basic validation rules for each form field.
 3. Create custom validation functions for specific inputs (e.g., password strength).

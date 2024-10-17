@@ -212,5 +212,3 @@ Task:
 Create a form that uses at least 5 different input types.
 The form should include fields for a name, email, password, age, and favorite color.
 Experiment with radio buttons and checkboxes to allow multiple choice selection.
-
-

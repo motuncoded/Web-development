@@ -5,6 +5,7 @@ On Day 27, you'll explore different ways to save form data. Whether you're build
 ---
 
 #### Goals for Day 27:
+
 - Understand different ways to store form data.
 - Learn how to use the browser's `localStorage` and `sessionStorage` for client-side data persistence.
 - Explore sending form data to a server using `fetch` or `XMLHttpRequest`.
@@ -23,40 +24,41 @@ HTML5 provides two methods for saving data on the client side: `localStorage` an
 **Example: Saving and Retrieving Data with `localStorage`**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Save Form Data</title>
-</head>
-<body>
-  <form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <button type="button" onclick="saveData()">Save Data</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Save Form Data</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <button type="button" onclick="saveData()">Save Data</button>
+    </form>
 
-  <script>
-    // Save data to localStorage
-    function saveData() {
-      const name = document.getElementById('name').value;
-      localStorage.setItem('name', name);
-      alert('Data saved!');
-    }
-
-    // Retrieve and set data on page load
-    window.onload = function() {
-      const savedName = localStorage.getItem('name');
-      if (savedName) {
-        document.getElementById('name').value = savedName;
+    <script>
+      // Save data to localStorage
+      function saveData() {
+        const name = document.getElementById("name").value;
+        localStorage.setItem("name", name);
+        alert("Data saved!");
       }
-    };
-  </script>
-</body>
+
+      // Retrieve and set data on page load
+      window.onload = function () {
+        const savedName = localStorage.getItem("name");
+        if (savedName) {
+          document.getElementById("name").value = savedName;
+        }
+      };
+    </script>
+  </body>
 </html>
 ```
 
 In this example:
+
 - The user's input is saved to `localStorage` when they click the **Save Data** button.
 - On page load, any saved data is retrieved and pre-filled into the form field.
 
@@ -71,32 +73,35 @@ To save form data to a server, you'll typically send it using HTTP methods such 
 ```html
 <form id="myForm">
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+  <input type="email" id="email" name="email" required />
   <button type="submit">Submit</button>
 </form>
 
 <script>
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting the default way
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form from submitting the default way
 
-    const email = document.getElementById('email').value;
-    const data = { email: email };
+      const email = document.getElementById("email").value;
+      const data = { email: email };
 
-    fetch('https://example.com/api/save', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch(error => console.error('Error:', error));
-  });
+      fetch("https://example.com/api/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log("Success:", data))
+        .catch((error) => console.error("Error:", error));
+    });
 </script>
 ```
 
 In this example:
+
 - The form data is serialized into JSON format and sent to the server via a `POST` request.
 - You handle the response and display feedback accordingly.
 
@@ -109,7 +114,7 @@ When submitting form data, you often need to **serialize** it (convert the form 
 **Example: Serializing Form Data**
 
 ```javascript
-const form = document.getElementById('myForm');
+const form = document.getElementById("myForm");
 const formData = new FormData(form);
 const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
@@ -117,6 +122,7 @@ console.log(jsonData);
 ```
 
 In this example:
+
 - **`FormData`** is used to gather all form fields and their values.
 - **`Object.fromEntries`** converts this data into a JavaScript object, and then it is serialized into JSON format with **`JSON.stringify`**.
 
@@ -134,6 +140,7 @@ When handling form data, it's important to follow security best practices to pro
 ---
 
 #### 5. Task for Today
+
 1. Create a form that saves data to `localStorage` and retrieves it on page reload.
 2. Implement a simple `POST` request using the `fetch` API to send form data to a mock server (or a real endpoint if available).
 3. Experiment with form data serialization using the `FormData` API.

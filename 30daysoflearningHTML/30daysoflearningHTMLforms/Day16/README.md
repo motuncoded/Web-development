@@ -5,6 +5,7 @@ Today, you’ll focus on the HTML5 `<input type="color">` element, which allows 
 ---
 
 ## Goals for Day 16:
+
 - Learn how to use the color picker input type.
 - Understand how the color picker works and its browser support.
 - Style the color picker input for a more cohesive form design.
@@ -19,9 +20,9 @@ The `<input type="color">` element lets users pick a color, which is returned as
 ```html
 <form>
   <label for="favcolor">Choose your favorite color:</label>
-  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-  
-  <input type="submit" value="Submit">
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -66,10 +67,10 @@ The above CSS creates a color picker input that’s visually consistent with you
 The color picker is generally accessible, but it’s still important to provide clear labels and descriptions. Here are some best practices:
 
 - **Labels**: Make sure the color input is associated with a clear label, so users know what they are selecting.
-  
+
   ```html
   <label for="background-color">Background Color:</label>
-  <input type="color" id="background-color" name="background-color">
+  <input type="color" id="background-color" name="background-color" />
   ```
 
 - **Color Contrast**: If you’re using colors for text or backgrounds based on the user’s selection, ensure that the contrast meets accessibility standards (e.g., WCAG guidelines for text contrast).
@@ -82,7 +83,12 @@ Example:
 
 ```html
 <label for="favcolor">Favorite Color:</label>
-<input type="color" id="favcolor" name="favcolor" aria-describedby="color-help">
+<input
+  type="color"
+  id="favcolor"
+  name="favcolor"
+  aria-describedby="color-help"
+/>
 <small id="color-help">Pick your favorite color for personalization</small>
 ```
 
@@ -94,14 +100,17 @@ Example:
 
 ```html
 <label for="favcolor">Choose a color:</label>
-<input type="color" id="favcolor" name="favcolor" value="#ff0000">
-<div id="color-display" style="width: 100px; height: 100px; background-color: #ff0000;"></div>
+<input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+<div
+  id="color-display"
+  style="width: 100px; height: 100px; background-color: #ff0000;"
+></div>
 
 <script>
-  const colorInput = document.getElementById('favcolor');
-  const colorDisplay = document.getElementById('color-display');
+  const colorInput = document.getElementById("favcolor");
+  const colorDisplay = document.getElementById("color-display");
 
-  colorInput.addEventListener('input', function() {
+  colorInput.addEventListener("input", function () {
     colorDisplay.style.backgroundColor = colorInput.value;
   });
 </script>
@@ -112,6 +121,7 @@ This script updates a div’s background color in real-time as the user selects 
 ---
 
 #### Task for Today:
+
 1. Create a form that includes a color picker input.
 2. Use CSS to style the color picker input for consistency with your form’s design.
 3. Ensure accessibility by using clear labels and ARIA attributes.

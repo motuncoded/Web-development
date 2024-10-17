@@ -1,110 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date and Time Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form aria-labelledby="date-time-form">
+      <h2 id="date-time-form">Date and Time Input Form</h2>
 
-  <form aria-labelledby="date-time-form">
-    <h2 id="date-time-form">Date and Time Input Form</h2>
+      <!-- Date Input -->
+      <label for="date-input">Select a Date:</label>
+      <input
+        type="date"
+        id="date-input"
+        name="date-input"
+        min="2023-01-01"
+        max="2025-12-31"
+        aria-required="true"
+      />
 
-    <!-- Date Input -->
-    <label for="date-input">Select a Date:</label>
-    <input 
-      type="date" 
-      id="date-input" 
-      name="date-input" 
-      min="2023-01-01" 
-      max="2025-12-31" 
-      aria-required="true">
+      <!-- Time Input -->
+      <label for="time-input">Select a Time:</label>
+      <input
+        type="time"
+        id="time-input"
+        name="time-input"
+        min="09:00"
+        max="18:00"
+        aria-required="true"
+      />
 
-    <!-- Time Input -->
-    <label for="time-input">Select a Time:</label>
-    <input 
-      type="time" 
-      id="time-input" 
-      name="time-input" 
-      min="09:00" 
-      max="18:00" 
-      aria-required="true">
+      <!-- Datetime-Local Input -->
+      <label for="datetime-input">Select a Date and Time:</label>
+      <input
+        type="datetime-local"
+        id="datetime-input"
+        name="datetime-input"
+        min="2024-01-01T09:00"
+        max="2024-12-31T18:00"
+        aria-required="true"
+      />
 
-    <!-- Datetime-Local Input -->
-    <label for="datetime-input">Select a Date and Time:</label>
-    <input 
-      type="datetime-local" 
-      id="datetime-input" 
-      name="datetime-input" 
-      min="2024-01-01T09:00" 
-      max="2024-12-31T18:00" 
-      aria-required="true">
+      <!-- Month Input -->
+      <label for="month-input">Select a Month:</label>
+      <input
+        type="month"
+        id="month-input"
+        name="month-input"
+        min="2023-01"
+        max="2025-12"
+        aria-required="true"
+      />
 
-    <!-- Month Input -->
-    <label for="month-input">Select a Month:</label>
-    <input 
-      type="month" 
-      id="month-input" 
-      name="month-input" 
-      min="2023-01" 
-      max="2025-12" 
-      aria-required="true">
+      <!-- Week Input -->
+      <label for="week-input">Select a Week:</label>
+      <input
+        type="week"
+        id="week-input"
+        name="week-input"
+        min="2023-W01"
+        max="2025-W52"
+        aria-required="true"
+      />
 
-    <!-- Week Input -->
-    <label for="week-input">Select a Week:</label>
-    <input 
-      type="week" 
-      id="week-input" 
-      name="week-input" 
-      min="2023-W01" 
-      max="2025-W52" 
-      aria-required="true">
-
-    <!-- Submit Button -->
-    <input type="submit" value="Submit">
-
-  </form>
-
-</body>
+      <!-- Submit Button -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>

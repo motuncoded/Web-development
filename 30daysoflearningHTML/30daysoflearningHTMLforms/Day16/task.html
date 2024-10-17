@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="/submit" method="POST" aria-labelledby="form-heading">
-    <h2 id="form-heading">Color Picker Form</h2>
+      <h2 id="form-heading">Color Picker Form</h2>
 
-    <!-- Name Input -->
-    <label for="name">Name:</label>
-    <input 
-      type="text" 
-      id="name" 
-      name="name" 
-      placeholder="Enter your name" 
-      required 
-      aria-required="true">
+      <!-- Name Input -->
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+        aria-required="true"
+      />
 
-    <!-- Email Input -->
-    <label for="email">Email:</label>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      placeholder="Enter your email" 
-      required 
-      aria-required="true">
+      <!-- Email Input -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        aria-required="true"
+      />
 
-    <!-- Color Picker Input -->
-    <label for="favcolor">Pick your favorite color:</label>
-    <input 
-      type="color" 
-      id="favcolor" 
-      name="favcolor" 
-      aria-describedby="color-desc"
-      aria-required="true">
-    <p id="color-desc">Choose a color you like!</p>
+      <!-- Color Picker Input -->
+      <label for="favcolor">Pick your favorite color:</label>
+      <input
+        type="color"
+        id="favcolor"
+        name="favcolor"
+        aria-describedby="color-desc"
+        aria-required="true"
+      />
+      <p id="color-desc">Choose a color you like!</p>
 
-    <!-- Display Selected Color (Optional with JavaScript) -->
+      <!-- Display Selected Color (Optional with JavaScript) -->
 
-    <!-- Submit Button -->
-    <input type="submit" value="Submit">
-
-  </form>
-</body>
+      <!-- Submit Button -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>

@@ -5,6 +5,7 @@ Welcome to Day 1 of your journey into form elements! Today, you will focus on th
 ---
 
 #### Goals for Day 1:
+
 - Understand the basic structure of a text input field.
 - Learn how to implement various attributes for text inputs.
 - Explore styling options to enhance the appearance of text inputs.
@@ -18,12 +19,13 @@ A text input field is created using the `<input>` element with the `type` attrib
 
 ```html
 <form>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required />
 </form>
 ```
 
 In this example:
+
 - The `<label>` element is associated with the text input through the `for` attribute, which enhances accessibility.
 - The `required` attribute indicates that this field must be filled out before submission.
 
@@ -43,8 +45,15 @@ Example:
 
 ```html
 <form>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="50">
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="you@example.com"
+    required
+    maxlength="50"
+  />
 </form>
 ```
 
@@ -57,18 +66,18 @@ Styling text inputs can significantly enhance the user experience. You can use C
 ```css
 input[type="text"],
 input[type="email"] {
-    width: 100%; /* Make input fields take full width */
-    padding: 10px; /* Add some padding */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Larger text size */
-    margin-bottom: 10px; /* Space between inputs */
+  width: 100%; /* Make input fields take full width */
+  padding: 10px; /* Add some padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Larger text size */
+  margin-bottom: 10px; /* Space between inputs */
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus {
-    border-color: #005fcc; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+  border-color: #005fcc; /* Change border color on focus */
+  outline: none; /* Remove default outline */
 }
 ```
 
@@ -87,10 +96,16 @@ Example of an accessible input with error handling:
 
 ```html
 <form id="signupForm">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required aria-required="true">
-    <p id="usernameError" class="error-message" aria-live="polite"></p>
-    <button type="submit">Submit</button>
+  <label for="username">Username:</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    required
+    aria-required="true"
+  />
+  <p id="usernameError" class="error-message" aria-live="polite"></p>
+  <button type="submit">Submit</button>
 </form>
 ```
 

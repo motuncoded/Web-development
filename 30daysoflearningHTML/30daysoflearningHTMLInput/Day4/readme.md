@@ -5,6 +5,7 @@ Welcome to Day 4! Today, you will focus on the **Number Input** field, which is 
 ---
 
 #### Goals for Day 4:
+
 - Understand the basic structure of a number input field.
 - Learn how to implement attributes specific to number inputs.
 - Explore validation considerations for number fields.
@@ -20,12 +21,13 @@ Here’s a simple example:
 
 ```html
 <form>
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required />
 </form>
 ```
 
 In this example:
+
 - The `required` attribute indicates that this field must be filled out before the form can be submitted.
 
 ---
@@ -43,8 +45,17 @@ Example:
 
 ```html
 <form>
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required min="0" max="120" step="1" placeholder="Enter your age">
+  <label for="age">Age:</label>
+  <input
+    type="number"
+    id="age"
+    name="age"
+    required
+    min="0"
+    max="120"
+    step="1"
+    placeholder="Enter your age"
+  />
 </form>
 ```
 
@@ -60,26 +71,28 @@ Example of custom validation handling:
 
 ```html
 <form id="ageForm">
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required min="0" max="120">
-    <span id="ageError" class="error-message" aria-live="polite"></span>
-    <button type="submit">Submit</button>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required min="0" max="120" />
+  <span id="ageError" class="error-message" aria-live="polite"></span>
+  <button type="submit">Submit</button>
 </form>
 
 <script>
-    document.getElementById('ageForm').addEventListener('submit', function(event) {
-        const ageInput = document.getElementById('age');
-        const ageError = document.getElementById('ageError');
+  document
+    .getElementById("ageForm")
+    .addEventListener("submit", function (event) {
+      const ageInput = document.getElementById("age");
+      const ageError = document.getElementById("ageError");
 
-        if (ageInput.validity.rangeUnderflow) {
-            ageError.textContent = 'Age must be at least 0.';
-            event.preventDefault(); // Prevent form submission
-        } else if (ageInput.validity.rangeOverflow) {
-            ageError.textContent = 'Age must be no more than 120.';
-            event.preventDefault(); // Prevent form submission
-        } else {
-            ageError.textContent = ''; // Clear error message
-        }
+      if (ageInput.validity.rangeUnderflow) {
+        ageError.textContent = "Age must be at least 0.";
+        event.preventDefault(); // Prevent form submission
+      } else if (ageInput.validity.rangeOverflow) {
+        ageError.textContent = "Age must be no more than 120.";
+        event.preventDefault(); // Prevent form submission
+      } else {
+        ageError.textContent = ""; // Clear error message
+      }
     });
 </script>
 ```
@@ -94,16 +107,16 @@ Example CSS:
 
 ```css
 input[type="number"] {
-    width: 100%; /* Full width */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+  width: 100%; /* Full width */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
 }
 
 input[type="number"]:focus {
-    border-color: #005fcc; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+  border-color: #005fcc; /* Change border color on focus */
+  outline: none; /* Remove default outline */
 }
 ```
 
@@ -121,10 +134,10 @@ Example of an accessible number input with error messaging:
 
 ```html
 <form id="numberForm">
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required aria-required="true">
-    <p id="ageError" class="error-message" aria-live="polite"></p>
-    <button type="submit">Submit</button>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required aria-required="true" />
+  <p id="ageError" class="error-message" aria-live="polite"></p>
+  <button type="submit">Submit</button>
 </form>
 ```
 

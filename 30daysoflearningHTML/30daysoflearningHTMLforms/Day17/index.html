@@ -1,37 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Range Input</title>
-</head>
-<body>
+  </head>
+  <body>
     <form>
-  <label for="volume">Volume:</label>
-  <input type="range" id="volume" name="volume" min="0" max="100" value="50">
-  <input type="submit" value="Submit">
+      <label for="volume">Volume:</label>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="100"
+        value="50"
+      />
+      <input type="submit" value="Submit" />
 
-  <br/>
+      <br />
 
-  <label for="brightness">Brightness:</label>
-  <input type="range" id="brightness" name="brightness" min="0" max="100" value="50" 
-  oninput="this.nextElementSibling.value = this.value">
-  <output>50</output> <!-- Displays the current value -->
-  
-<br/>
-   <label for="bg-color">Background Color Intensity:</label>
-  <input type="range" id="bg-color" name="bg-color" min="0" max="255" value="155" oninput="changeBackground(this)">
-  <output id="output-value">155</output>
-  <input type="submit" value="Submit">
-</form>
+      <label for="brightness">Brightness:</label>
+      <input
+        type="range"
+        id="brightness"
+        name="brightness"
+        min="0"
+        max="100"
+        value="50"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>50</output>
+      <!-- Displays the current value -->
 
-<script>
-  function changeBackground(valueInput) {
-const value = valueInput.value
-      document.getElementById('output-value').value = value;
+      <br />
+      <label for="bg-color">Background Color Intensity:</label>
+      <input
+        type="range"
+        id="bg-color"
+        name="bg-color"
+        min="0"
+        max="255"
+        value="155"
+        oninput="changeBackground(this)"
+      />
+      <output id="output-value">155</output>
+      <input type="submit" value="Submit" />
+    </form>
 
-    document.body.style.backgroundColor = `rgb(${value}, ${value}, ${value})`;
-  }
-</script>
-</body>
+    <script>
+      function changeBackground(valueInput) {
+        const value = valueInput.value;
+        document.getElementById("output-value").value = value;
+
+        document.body.style.backgroundColor = `rgb(${value}, ${value}, ${value})`;
+      }
+    </script>
+  </body>
 </html>

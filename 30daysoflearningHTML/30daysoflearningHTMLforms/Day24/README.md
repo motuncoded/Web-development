@@ -5,6 +5,7 @@ On Day 24, you’ll focus on accessibility best practices for forms, ensuring th
 ---
 
 #### Goals for Day 24:
+
 - Understand the importance of accessibility in web forms.
 - Learn how to use semantic HTML to improve accessibility.
 - Implement ARIA roles and properties effectively.
@@ -27,7 +28,7 @@ Using semantic HTML elements improves accessibility by providing context to assi
 
   ```html
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+  <input type="email" id="email" name="email" required />
   ```
 
 - **Use `<fieldset>` and `<legend>`**: Group related form controls using `<fieldset>` and provide a title using `<legend>` for better context.
@@ -36,7 +37,7 @@ Using semantic HTML elements improves accessibility by providing context to assi
   <fieldset>
     <legend>Contact Information</legend>
     <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" required>
+    <input type="tel" id="phone" name="phone" required />
   </fieldset>
   ```
 
@@ -59,7 +60,15 @@ When native HTML elements do not provide sufficient accessibility, ARIA (Accessi
 - **Provide additional context with ARIA properties**: Use properties like `aria-required`, `aria-invalid`, and `aria-describedby` to convey information about form controls.
 
   ```html
-  <input type="text" id="username" name="username" required aria-required="true" aria-invalid="true" aria-describedby="usernameError">
+  <input
+    type="text"
+    id="username"
+    name="username"
+    required
+    aria-required="true"
+    aria-invalid="true"
+    aria-describedby="usernameError"
+  />
   <p id="usernameError" class="error-message">Username is required.</p>
   ```
 
@@ -106,6 +115,7 @@ Use accessibility testing tools and manual testing to ensure your forms are acce
 ---
 
 #### Task for Today
+
 1. Review your existing forms and ensure they use semantic HTML elements.
 2. Implement ARIA roles and properties where necessary to enhance accessibility.
 3. Ensure all form elements can be navigated using a keyboard.

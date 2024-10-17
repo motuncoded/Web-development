@@ -5,6 +5,7 @@ Today, you'll focus on the `placeholder` attribute in HTML, which is used to pro
 ---
 
 #### Goals for Day 18:
+
 - Understand how to use the `placeholder` attribute.
 - Learn best practices for writing effective placeholders.
 - Customize the appearance of placeholders using CSS.
@@ -21,12 +22,22 @@ Here’s a simple example:
 ```html
 <form>
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="example@example.com">
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="example@example.com"
+  />
 
   <label for="password">Password:</label>
-  <input type="password" id="password" name="password" placeholder="Enter your password">
-  
-  <input type="submit" value="Submit">
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="Enter your password"
+  />
+
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -40,14 +51,20 @@ While placeholders are useful, they should not replace proper labels or be overu
 
   ```html
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username" placeholder="Choose a unique username">
+  <input
+    type="text"
+    id="username"
+    name="username"
+    placeholder="Choose a unique username"
+  />
   ```
 
 - **Be concise**: Placeholders should provide brief instructions or examples, not detailed information. Use short phrases or examples that fit within the input field.
 
   Example of a concise placeholder:
+
   ```html
-  <input type="text" name="phone" placeholder="(555) 555-5555">
+  <input type="text" name="phone" placeholder="(555) 555-5555" />
   ```
 
 - **Avoid relying solely on placeholders for critical information**: Since the placeholder text disappears when users start typing, it shouldn’t contain essential instructions like password requirements or format rules.
@@ -55,8 +72,9 @@ While placeholders are useful, they should not replace proper labels or be overu
 - **Use examples or expected format**: Help users understand the expected input by providing an example value as the placeholder.
 
   Example:
+
   ```html
-  <input type="text" name="date" placeholder="MM/DD/YYYY">
+  <input type="text" name="date" placeholder="MM/DD/YYYY" />
   ```
 
 ## 3. Customizing Placeholder Text with CSS
@@ -109,22 +127,22 @@ Example:
   </select>
 
   <label for="phone">Phone Number:</label>
-  <input type="text" id="phone" name="phone" placeholder="(555) 555-5555">
-  
-  <input type="submit" value="Submit">
+  <input type="text" id="phone" name="phone" placeholder="(555) 555-5555" />
+
+  <input type="submit" value="Submit" />
 </form>
 
 <script>
   function updatePlaceholder() {
-    const country = document.getElementById('country').value;
-    const phoneInput = document.getElementById('phone');
+    const country = document.getElementById("country").value;
+    const phoneInput = document.getElementById("phone");
 
-    if (country === 'us') {
-      phoneInput.placeholder = '(555) 555-5555';
-    } else if (country === 'uk') {
-      phoneInput.placeholder = '07123 456789';
-    } else if (country === 'fr') {
-      phoneInput.placeholder = '01 23 45 67 89';
+    if (country === "us") {
+      phoneInput.placeholder = "(555) 555-5555";
+    } else if (country === "uk") {
+      phoneInput.placeholder = "07123 456789";
+    } else if (country === "fr") {
+      phoneInput.placeholder = "01 23 45 67 89";
     }
   }
 </script>
@@ -135,6 +153,7 @@ In this example, the phone number placeholder updates based on the selected coun
 ---
 
 #### Task for Today:
+
 1. Create a form that uses placeholders to guide users.
 2. Style the placeholder text to match the design of your form.
 3. Ensure that labels are provided for each input and that placeholders have sufficient contrast.

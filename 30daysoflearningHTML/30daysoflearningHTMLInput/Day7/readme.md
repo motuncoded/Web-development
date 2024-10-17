@@ -5,6 +5,7 @@ Welcome to Day 7! Today, you'll focus on **Checkboxes**, which allow users to se
 ---
 
 #### Goals for Day 7:
+
 - Understand the basic structure of checkboxes.
 - Learn how to group checkboxes using the same name attribute.
 - Explore accessibility considerations for checkboxes.
@@ -18,25 +19,26 @@ A checkbox is created using the `<input>` element with the `type` attribute set 
 
 ```html
 <form>
-    <fieldset>
-        <legend>Select your hobbies:</legend>
-        <label>
-            <input type="checkbox" name="hobbies" value="reading">
-            Reading
-        </label>
-        <label>
-            <input type="checkbox" name="hobbies" value="traveling">
-            Traveling
-        </label>
-        <label>
-            <input type="checkbox" name="hobbies" value="cooking">
-            Cooking
-        </label>
-    </fieldset>
+  <fieldset>
+    <legend>Select your hobbies:</legend>
+    <label>
+      <input type="checkbox" name="hobbies" value="reading" />
+      Reading
+    </label>
+    <label>
+      <input type="checkbox" name="hobbies" value="traveling" />
+      Traveling
+    </label>
+    <label>
+      <input type="checkbox" name="hobbies" value="cooking" />
+      Cooking
+    </label>
+  </fieldset>
 </form>
 ```
 
 In this example:
+
 - Each checkbox is associated with a label for better usability.
 - Users can select any combination of the provided options.
 
@@ -48,21 +50,21 @@ While checkboxes can share the same `name` attribute to group them logically, ea
 
 ```html
 <form>
-    <fieldset>
-        <legend>Select your favorite programming languages:</legend>
-        <label>
-            <input type="checkbox" name="languages" value="javascript">
-            JavaScript
-        </label>
-        <label>
-            <input type="checkbox" name="languages" value="python">
-            Python
-        </label>
-        <label>
-            <input type="checkbox" name="languages" value="java">
-            Java
-        </label>
-    </fieldset>
+  <fieldset>
+    <legend>Select your favorite programming languages:</legend>
+    <label>
+      <input type="checkbox" name="languages" value="javascript" />
+      JavaScript
+    </label>
+    <label>
+      <input type="checkbox" name="languages" value="python" />
+      Python
+    </label>
+    <label>
+      <input type="checkbox" name="languages" value="java" />
+      Java
+    </label>
+  </fieldset>
 </form>
 ```
 
@@ -73,7 +75,6 @@ While checkboxes can share the same `name` attribute to group them logically, ea
 To ensure accessibility for all users, follow these best practices:
 
 - **Use Labels**: Always provide `<label>` elements associated with checkboxes. Clicking on the label should select or deselect the corresponding checkbox.
-  
 - **Fieldset and Legend**: Group related checkboxes using the `<fieldset>` and `<legend>` elements to provide context.
 
 - **Keyboard Accessibility**: Ensure users can navigate and select checkboxes using the keyboard (Tab to navigate and Space to toggle).
@@ -82,21 +83,21 @@ Example of accessible checkboxes:
 
 ```html
 <form>
-    <fieldset>
-        <legend>Select your favorite desserts:</legend>
-        <label>
-            <input type="checkbox" name="desserts" value="cake">
-            Cake
-        </label>
-        <label>
-            <input type="checkbox" name="desserts" value="ice-cream">
-            Ice Cream
-        </label>
-        <label>
-            <input type="checkbox" name="desserts" value="cookies">
-            Cookies
-        </label>
-    </fieldset>
+  <fieldset>
+    <legend>Select your favorite desserts:</legend>
+    <label>
+      <input type="checkbox" name="desserts" value="cake" />
+      Cake
+    </label>
+    <label>
+      <input type="checkbox" name="desserts" value="ice-cream" />
+      Ice Cream
+    </label>
+    <label>
+      <input type="checkbox" name="desserts" value="cookies" />
+      Cookies
+    </label>
+  </fieldset>
 </form>
 ```
 
@@ -108,39 +109,39 @@ You can style checkboxes to enhance their appearance. Below is a basic CSS examp
 
 ```css
 input[type="checkbox"] {
-    display: none; /* Hide the default checkbox */
+  display: none; /* Hide the default checkbox */
 }
 
 label {
-    position: relative;
-    padding-left: 30px; /* Space for custom checkbox */
-    cursor: pointer; /* Change cursor to pointer */
+  position: relative;
+  padding-left: 30px; /* Space for custom checkbox */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
 label::before {
-    content: '';
-    position: absolute;
-    left: 0; /* Align with label */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-    width: 20px; /* Custom checkbox size */
-    height: 20px; /* Custom checkbox size */
-    border: 2px solid #005fcc; /* Border color */
-    border-radius: 4px; /* Square corners */
-    background: white; /* Background color */
+  content: "";
+  position: absolute;
+  left: 0; /* Align with label */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 20px; /* Custom checkbox size */
+  height: 20px; /* Custom checkbox size */
+  border: 2px solid #005fcc; /* Border color */
+  border-radius: 4px; /* Square corners */
+  background: white; /* Background color */
 }
 
 input[type="checkbox"]:checked + label::before {
-    background: #005fcc; /* Change background on checked */
+  background: #005fcc; /* Change background on checked */
 }
 
 input[type="checkbox"]:checked + label::after {
-    content: '✔'; /* Checkmark symbol */
-    position: absolute;
-    left: 5px; /* Adjust position for checkmark */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-    color: white; /* Checkmark color */
+  content: "✔"; /* Checkmark symbol */
+  position: absolute;
+  left: 5px; /* Adjust position for checkmark */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  color: white; /* Checkmark color */
 }
 ```
 

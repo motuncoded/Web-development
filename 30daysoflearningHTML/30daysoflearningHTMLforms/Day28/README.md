@@ -5,6 +5,7 @@ On Day 28, you'll dive into handling form submissions effectively. This involves
 ---
 
 #### Goals for Day 28:
+
 - Learn how to handle form submissions in JavaScript.
 - Understand different submission methods (synchronous and asynchronous).
 - Implement client-side form submission with AJAX.
@@ -23,12 +24,13 @@ In a traditional form submission, the form data is sent to the server when the s
 ```html
 <form action="/submit-form" method="POST">
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
+  <input type="text" id="username" name="username" required />
   <button type="submit">Submit</button>
 </form>
 ```
 
 In this example:
+
 - The form is submitted to the URL `/submit-form` using the `POST` method.
 - Once submitted, the page is refreshed, and the data is sent to the server.
 
@@ -43,34 +45,37 @@ To prevent page reloads and make the submission process more dynamic, you can ha
 ```html
 <form id="myForm">
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+  <input type="email" id="email" name="email" required />
   <button type="submit">Submit</button>
 </form>
 
 <script>
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
 
-    const formData = new FormData(this);
+      const formData = new FormData(this);
 
-    fetch('/submit-form', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-      alert('Form submitted successfully!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was an error submitting the form.');
+      fetch("/submit-form", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          alert("Form submitted successfully!");
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("There was an error submitting the form.");
+        });
     });
-  });
 </script>
 ```
 
 In this example:
+
 - The default form submission is prevented using `event.preventDefault()`.
 - The `fetch` API is used to send the form data asynchronously to the server.
 - Feedback is provided to the user upon success or failure of the submission.
@@ -80,6 +85,7 @@ In this example:
 #### 3. Synchronous vs. Asynchronous Submissions
 
 There are two main types of form submissions:
+
 - **Synchronous Submission**: The page reloads upon form submission (traditional form submission).
 - **Asynchronous Submission**: The form data is sent in the background without reloading the page (using AJAX or `fetch`).
 
@@ -94,18 +100,19 @@ When a form is submitted, the server processes the data. On the server side, you
 **Example: Basic Server-Side Handling (in Node.js)**
 
 ```javascript
-app.post('/submit-form', (req, res) => {
+app.post("/submit-form", (req, res) => {
   const { email } = req.body;
 
   // Process the form data (e.g., save to database)
   console.log(`Form submitted with email: ${email}`);
 
   // Send a response back to the client
-  res.json({ message: 'Form submitted successfully!' });
+  res.json({ message: "Form submitted successfully!" });
 });
 ```
 
 In this example:
+
 - The server receives the form data (`email`) and processes it.
 - After processing, a JSON response is sent back to the client.
 
@@ -120,33 +127,38 @@ Providing clear feedback to the user is important after they submit a form. You 
 ```html
 <form id="myForm">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
+  <input type="text" id="name" name="name" required />
   <button type="submit">Submit</button>
   <p id="feedbackMessage"></p>
 </form>
 
 <script>
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  document
+    .getElementById("myForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const formData = new FormData(this);
+      const formData = new FormData(this);
 
-    fetch('/submit-form', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('feedbackMessage').textContent = 'Form submitted successfully!';
-    })
-    .catch(error => {
-      document.getElementById('feedbackMessage').textContent = 'Error submitting form.';
+      fetch("/submit-form", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("feedbackMessage").textContent =
+            "Form submitted successfully!";
+        })
+        .catch((error) => {
+          document.getElementById("feedbackMessage").textContent =
+            "Error submitting form.";
+        });
     });
-  });
 </script>
 ```
 
 Here:
+
 - A feedback message is displayed within the `<p>` element based on the success or failure of the submission.
 - This provides immediate feedback to the user, improving the overall experience.
 
@@ -165,6 +177,7 @@ To ensure a smooth and secure form submission process, follow these best practic
 ---
 
 #### 7. Task for Today
+
 1. Implement form submission handling using JavaScript and prevent default behavior with `event.preventDefault()`.
 2. Use `fetch` or `XMLHttpRequest` to submit the form data asynchronously.
 3. Provide feedback to the user after form submission (success or error).

@@ -5,6 +5,7 @@ On Day 21, you’ll explore how to enhance your form inputs by adding icons. Ico
 ---
 
 #### Goals for Day 21:
+
 - Learn how to add icons inside text inputs.
 - Use icon libraries (like Font Awesome) to add a wide variety of icons.
 - Understand how to position and style icons within input fields.
@@ -17,6 +18,7 @@ On Day 21, you’ll explore how to enhance your form inputs by adding icons. Ico
 One of the easiest ways to add icons to input fields is by using an icon library like **Font Awesome**, which provides a wide range of icons that can be easily embedded into your HTML.
 
 To get started with Font Awesome, you can either:
+
 1. Include the CDN link in your HTML.
 2. Install it as an npm package (if working with a build system).
 
@@ -24,7 +26,10 @@ Here’s how you can include the CDN link:
 
 ```html
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
 </head>
 ```
 
@@ -36,7 +41,7 @@ Here’s an example of how to add a search icon inside a text input field:
 <form>
   <label for="search">Search:</label>
   <div class="input-wrapper">
-    <input type="text" id="search" name="search" placeholder="Search...">
+    <input type="text" id="search" name="search" placeholder="Search..." />
     <i class="fas fa-search"></i>
   </div>
 </form>
@@ -67,6 +72,7 @@ Here’s an example of how to add a search icon inside a text input field:
 ```
 
 In this example:
+
 - The Font Awesome search icon (`fa-search`) is added next to the input field.
 - The `input-wrapper` div is used to position the icon within the input.
 - The input field is styled with extra padding on the left to make space for the icon.
@@ -80,7 +86,12 @@ Icons can be used in various types of inputs, such as password fields, email fie
 <form>
   <label for="password">Password:</label>
   <div class="input-wrapper">
-    <input type="password" id="password" name="password" placeholder="Enter password">
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
     <i class="fas fa-lock"></i>
   </div>
 </form>
@@ -110,6 +121,7 @@ Icons can be used in various types of inputs, such as password fields, email fie
 ```
 
 In this example:
+
 - A lock icon (`fa-lock`) is added to a password field to indicate the input’s purpose.
 
 #### 3. Styling and Positioning Icons
@@ -130,9 +142,11 @@ You can adjust the size, color, and positioning of icons to match the style of y
 #### 4. Accessibility Considerations
 
 Icons should enhance the user experience without hindering accessibility. When adding icons to form inputs, make sure that:
+
 - **The icon is decorative**: If the icon is purely decorative (like a search or email icon), use `aria-hidden="true"` to hide it from screen readers.
-  
+
   Example:
+
   ```html
   <i class="fas fa-search" aria-hidden="true"></i>
   ```
@@ -146,7 +160,12 @@ You can also pair icons with button inputs to create visually appealing submit b
 ```html
 <form>
   <div class="search-bar">
-    <input type="text" id="search-input" name="search" placeholder="Search...">
+    <input
+      type="text"
+      id="search-input"
+      name="search"
+      placeholder="Search..."
+    />
     <button type="submit">
       <i class="fas fa-search"></i>
     </button>
@@ -192,6 +211,7 @@ You can also pair icons with button inputs to create visually appealing submit b
 ```
 
 In this example:
+
 - The input and button are grouped together inside a flex container (`search-bar`).
 - The button contains the search icon, and it’s styled to match the form’s theme.
 - A hover effect changes the button color when the user hovers over it.
@@ -199,6 +219,7 @@ In this example:
 ---
 
 #### 6. Icon Placement Tips
+
 - **Inside vs Outside**: Placing icons inside the input is common for fields like search bars, but you can also place icons outside the input, especially for actions like submitting forms.
 - **Spacing**: Ensure that you leave enough padding between the icon and the input text so that the text is not crowded.
 - **Alignment**: Align icons vertically within the input to match the text's baseline. This ensures a clean, professional look.
@@ -206,6 +227,7 @@ In this example:
 ---
 
 #### Task for Today:
+
 1. Add icons to various form inputs, such as search bars, password fields, and email inputs.
 2. Use Font Awesome (or another icon library) to integrate icons into your form design.
 3. Experiment with positioning and styling the icons to match your form’s look.

@@ -1,21 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Input</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="" method="post">
-        <label for="fileUpload">Upload your image, document, profile picture</label>
-    <input type="file" name="fileUpload" id="fileUpload"
+      <label for="fileUpload"
+        >Upload your image, document, profile picture</label
+      >
+      <input
+        type="file"
+        name="fileUpload"
+        id="fileUpload"
         accept="image/*, .pdf, .docx"
-
-    aria-labelledby="fileUpload"
+        aria-labelledby="fileUpload"
         aria-describedby="file-requirements"
-
-    >
-    <span id="file-requirements">Only PDF, DOCX files, PNG,JPG Images. Max 5MB.</span>
+      />
+      <span id="file-requirements"
+        >Only PDF, DOCX files, PNG,JPG Images. Max 5MB.</span
+      >
     </form>
-</body>
+  </body>
 </html>

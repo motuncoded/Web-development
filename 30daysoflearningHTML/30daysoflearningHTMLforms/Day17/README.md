@@ -5,6 +5,7 @@ Today, you’ll explore the `<input type="range">` element, which allows users t
 ---
 
 #### Goals for Day 17:
+
 - Learn how to use the range input type.
 - Understand the `min`, `max`, and `step` attributes to control the range.
 - Customize the appearance of the range slider with CSS.
@@ -21,12 +22,13 @@ Example of a basic range input:
 ```html
 <form>
   <label for="volume">Volume:</label>
-  <input type="range" id="volume" name="volume" min="0" max="100" value="50">
-  <input type="submit" value="Submit">
+  <input type="range" id="volume" name="volume" min="0" max="100" value="50" />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
 Key attributes for the range input:
+
 - **`min`**: The minimum value of the range (e.g., 0).
 - **`max`**: The maximum value of the range (e.g., 100).
 - **`value`**: The initial value of the range slider (e.g., 50).
@@ -41,10 +43,19 @@ Example:
 ```html
 <form>
   <label for="brightness">Brightness:</label>
-  <input type="range" id="brightness" name="brightness" min="0" max="100" value="50" oninput="this.nextElementSibling.value = this.value">
-  <output>50</output> <!-- Displays the current value -->
-  
-  <input type="submit" value="Submit">
+  <input
+    type="range"
+    id="brightness"
+    name="brightness"
+    min="0"
+    max="100"
+    value="50"
+    oninput="this.nextElementSibling.value = this.value"
+  />
+  <output>50</output>
+  <!-- Displays the current value -->
+
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -91,10 +102,17 @@ In this example, the slider track is styled as a thin line, and the slider thumb
 To ensure that range inputs are accessible, you should provide clear labels, visual indicators, and ARIA attributes to help users understand the purpose and current value of the slider.
 
 - **Labels**: Make sure the range input is associated with a descriptive label.
-  
+
   ```html
   <label for="brightness">Brightness Level:</label>
-  <input type="range" id="brightness" name="brightness" min="0" max="100" value="50">
+  <input
+    type="range"
+    id="brightness"
+    name="brightness"
+    min="0"
+    max="100"
+    value="50"
+  />
   ```
 
 - **Current Value**: Display the current value of the slider visually for users who may have difficulty perceiving the slider’s position.
@@ -104,8 +122,18 @@ To ensure that range inputs are accessible, you should provide clear labels, vis
 Example:
 
 ```html
-<input type="range" id="brightness" name="brightness" min="0" max="100" value="50"
-       aria-label="Brightness Level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+<input
+  type="range"
+  id="brightness"
+  name="brightness"
+  min="0"
+  max="100"
+  value="50"
+  aria-label="Brightness Level"
+  aria-valuemin="0"
+  aria-valuemax="100"
+  aria-valuenow="50"
+/>
 ```
 
 #### 5. Enhancing Range Inputs with JavaScript (Optional)
@@ -117,7 +145,15 @@ Example of changing the background color based on the slider value:
 ```html
 <form>
   <label for="bg-color">Background Color Intensity:</label>
-  <input type="range" id="bg-color" name="bg-color" min="0" max="255" value="128" oninput="changeBackground(this.value)">
+  <input
+    type="range"
+    id="bg-color"
+    name="bg-color"
+    min="0"
+    max="255"
+    value="128"
+    oninput="changeBackground(this.value)"
+  />
   <output>128</output>
 </form>
 
@@ -133,6 +169,7 @@ In this example, the background color of the page changes based on the slider’
 ---
 
 #### Task for Today:
+
 1. Create a form that uses a range input to allow users to select a value.
 2. Use CSS to customize the appearance of the range input.
 3. Display the current value of the slider dynamically using JavaScript.

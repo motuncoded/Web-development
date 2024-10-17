@@ -5,6 +5,7 @@ Welcome to Day 2! Today, you will focus on the **Password Input** field, which i
 ---
 
 #### Goals for Day 2:
+
 - Understand the basic structure of a password input field.
 - Learn how to implement attributes specific to password inputs.
 - Explore security considerations for password fields.
@@ -20,12 +21,13 @@ Here’s a simple example:
 
 ```html
 <form>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required />
 </form>
 ```
 
 In this example:
+
 - The `required` attribute indicates that this field must be filled out before the form can be submitted.
 
 ---
@@ -44,8 +46,15 @@ Example:
 
 ```html
 <form>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    required
+    minlength="8"
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  />
 </form>
 ```
 
@@ -62,18 +71,19 @@ Example of a password visibility toggle:
 
 ```html
 <label for="password">Password:</label>
-<input type="password" id="password" name="password" required>
+<input type="password" id="password" name="password" required />
 <button type="button" id="togglePassword">Show</button>
 
 <script>
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("password");
 
-    togglePassword.addEventListener('click', function () {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        this.textContent = type === 'password' ? 'Show' : 'Hide';
-    });
+  togglePassword.addEventListener("click", function () {
+    const type =
+      passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+    this.textContent = type === "password" ? "Show" : "Hide";
+  });
 </script>
 ```
 
@@ -87,16 +97,16 @@ Example CSS:
 
 ```css
 input[type="password"] {
-    width: 100%; /* Full width */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+  width: 100%; /* Full width */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
 }
 
 input[type="password"]:focus {
-    border-color: #005fcc; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+  border-color: #005fcc; /* Change border color on focus */
+  outline: none; /* Remove default outline */
 }
 ```
 
@@ -114,10 +124,16 @@ Example of an accessible password input with error messaging:
 
 ```html
 <form id="signupForm">
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required aria-required="true">
-    <p id="passwordError" class="error-message" aria-live="polite"></p>
-    <button type="submit">Submit</button>
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    required
+    aria-required="true"
+  />
+  <p id="passwordError" class="error-message" aria-live="polite"></p>
+  <button type="submit">Submit</button>
 </form>
 ```
 

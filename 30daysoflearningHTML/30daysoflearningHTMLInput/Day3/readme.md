@@ -5,6 +5,7 @@ Welcome to Day 3! Today, you'll focus on the **Email Input** field, an essential
 ---
 
 #### Goals for Day 3:
+
 - Understand the basic structure of an email input field.
 - Learn how to implement attributes specific to email inputs.
 - Explore validation considerations for email fields.
@@ -20,12 +21,13 @@ Here's a simple example:
 
 ```html
 <form>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
 </form>
 ```
 
 In this example:
+
 - The `required` attribute indicates that this field must be filled out before the form can be submitted.
 
 ---
@@ -43,8 +45,17 @@ Example:
 
 ```html
 <form>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required maxlength="50" autocomplete="email" multiple>
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="you@example.com"
+    required
+    maxlength="50"
+    autocomplete="email"
+    multiple
+  />
 </form>
 ```
 
@@ -60,23 +71,25 @@ Here's how to handle validation with a custom message:
 
 ```html
 <form id="emailForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <span id="emailError" class="error-message" aria-live="polite"></span>
-    <button type="submit">Submit</button>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+  <span id="emailError" class="error-message" aria-live="polite"></span>
+  <button type="submit">Submit</button>
 </form>
 
 <script>
-    document.getElementById('emailForm').addEventListener('submit', function(event) {
-        const emailInput = document.getElementById('email');
-        const emailError = document.getElementById('emailError');
+  document
+    .getElementById("emailForm")
+    .addEventListener("submit", function (event) {
+      const emailInput = document.getElementById("email");
+      const emailError = document.getElementById("emailError");
 
-        if (!emailInput.validity.valid) {
-            emailError.textContent = 'Please enter a valid email address.';
-            event.preventDefault(); // Prevent form submission
-        } else {
-            emailError.textContent = ''; // Clear error message
-        }
+      if (!emailInput.validity.valid) {
+        emailError.textContent = "Please enter a valid email address.";
+        event.preventDefault(); // Prevent form submission
+      } else {
+        emailError.textContent = ""; // Clear error message
+      }
     });
 </script>
 ```
@@ -89,16 +102,16 @@ You can style email input fields to ensure they are user-friendly and visually a
 
 ```css
 input[type="email"] {
-    width: 100%; /* Full width */
-    padding: 10px; /* Add padding */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
+  width: 100%; /* Full width */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
 }
 
 input[type="email"]:focus {
-    border-color: #005fcc; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+  border-color: #005fcc; /* Change border color on focus */
+  outline: none; /* Remove default outline */
 }
 ```
 
@@ -116,10 +129,10 @@ Example of an accessible email input with error messaging:
 
 ```html
 <form id="signupForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required aria-required="true">
-    <p id="emailError" class="error-message" aria-live="polite"></p>
-    <button type="submit">Submit</button>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required aria-required="true" />
+  <p id="emailError" class="error-message" aria-live="polite"></p>
+  <button type="submit">Submit</button>
 </form>
 ```
 

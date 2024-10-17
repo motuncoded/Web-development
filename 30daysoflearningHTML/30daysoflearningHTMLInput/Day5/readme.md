@@ -5,6 +5,7 @@ Welcome to Day 5! Today, you'll focus on the **Range Input** field, which allows
 ---
 
 #### Goals for Day 5:
+
 - Understand the basic structure of a range input field.
 - Learn how to implement attributes specific to range inputs.
 - Explore styling options for range inputs.
@@ -18,12 +19,21 @@ A range input field is created using the `<input>` element with the `type` attri
 
 ```html
 <form>
-    <label for="volume">Volume:</label>
-    <input type="range" id="volume" name="volume" min="0" max="100" value="50" step="1">
+  <label for="volume">Volume:</label>
+  <input
+    type="range"
+    id="volume"
+    name="volume"
+    min="0"
+    max="100"
+    value="50"
+    step="1"
+  />
 </form>
 ```
 
 In this example:
+
 - **`min`** sets the minimum value of the range.
 - **`max`** sets the maximum value of the range.
 - **`value`** sets the initial value when the slider is displayed.
@@ -44,8 +54,17 @@ Example:
 
 ```html
 <form>
-    <label for="brightness">Brightness:</label>
-    <input type="range" id="brightness" name="brightness" min="0" max="100" value="50" step="1" disabled>
+  <label for="brightness">Brightness:</label>
+  <input
+    type="range"
+    id="brightness"
+    name="brightness"
+    min="0"
+    max="100"
+    value="50"
+    step="1"
+    disabled
+  />
 </form>
 ```
 
@@ -57,30 +76,30 @@ You can style range inputs using CSS to improve their appearance and user experi
 
 ```css
 input[type="range"] {
-    -webkit-appearance: none; /* Override default CSS styles */
-    width: 100%; /* Full width */
-    height: 8px; /* Height of the slider */
-    background: #ddd; /* Background color of the track */
-    border-radius: 5px; /* Rounded corners */
-    outline: none; /* Remove outline */
+  -webkit-appearance: none; /* Override default CSS styles */
+  width: 100%; /* Full width */
+  height: 8px; /* Height of the slider */
+  background: #ddd; /* Background color of the track */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default styles */
-    appearance: none; /* Override default styles */
-    width: 20px; /* Thumb width */
-    height: 20px; /* Thumb height */
-    background: #005fcc; /* Thumb color */
-    border-radius: 50%; /* Rounded thumb */
-    cursor: pointer; /* Change cursor */
+  -webkit-appearance: none; /* Override default styles */
+  appearance: none; /* Override default styles */
+  width: 20px; /* Thumb width */
+  height: 20px; /* Thumb height */
+  background: #005fcc; /* Thumb color */
+  border-radius: 50%; /* Rounded thumb */
+  cursor: pointer; /* Change cursor */
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 20px; /* Thumb width */
-    height: 20px; /* Thumb height */
-    background: #005fcc; /* Thumb color */
-    border-radius: 50%; /* Rounded thumb */
-    cursor: pointer; /* Change cursor */
+  width: 20px; /* Thumb width */
+  height: 20px; /* Thumb height */
+  background: #005fcc; /* Thumb color */
+  border-radius: 50%; /* Rounded thumb */
+  cursor: pointer; /* Change cursor */
 }
 ```
 
@@ -100,14 +119,23 @@ Example with value display:
 
 ```html
 <form>
-    <label for="volume">Volume: <span id="volumeValue">50</span></label>
-    <input type="range" id="volume" name="volume" min="0" max="100" value="50" step="1" oninput="updateVolumeValue(this.value)">
+  <label for="volume">Volume: <span id="volumeValue">50</span></label>
+  <input
+    type="range"
+    id="volume"
+    name="volume"
+    min="0"
+    max="100"
+    value="50"
+    step="1"
+    oninput="updateVolumeValue(this.value)"
+  />
 </form>
 
 <script>
-    function updateVolumeValue(value) {
-        document.getElementById('volumeValue').textContent = value;
-    }
+  function updateVolumeValue(value) {
+    document.getElementById("volumeValue").textContent = value;
+  }
 </script>
 ```
 

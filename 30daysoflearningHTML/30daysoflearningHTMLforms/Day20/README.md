@@ -5,6 +5,7 @@ On Day 20, you'll focus on customizing the appearance of form inputs to create p
 ---
 
 #### Goals for Day 20:
+
 - Learn how to apply CSS to customize text inputs, buttons, checkboxes, radio buttons, and other input elements.
 - Understand best practices for making input styles accessible and responsive.
 - Experiment with adding hover, focus, and active states to inputs.
@@ -21,9 +22,9 @@ Example of customizing a text input field:
 ```html
 <form>
   <label for="name">Full Name:</label>
-  <input type="text" id="name" name="name" class="custom-input">
-  
-  <input type="submit" value="Submit" class="custom-button">
+  <input type="text" id="name" name="name" class="custom-input" />
+
+  <input type="submit" value="Submit" class="custom-button" />
 </form>
 
 <style>
@@ -58,6 +59,7 @@ Example of customizing a text input field:
 ```
 
 In this example:
+
 - The text input has rounded corners, padding, and a focus state that changes the border color and adds a subtle shadow.
 - The submit button is styled with a green background, rounded corners, and a hover effect.
 
@@ -93,6 +95,7 @@ Example of a modern, styled button:
 ```
 
 In this example:
+
 - The button has a rounded pill shape with a smooth transition effect when hovered.
 - It also has an active state that provides feedback when clicked.
 
@@ -105,7 +108,7 @@ Example of customized checkboxes:
 ```html
 <form>
   <label class="custom-checkbox">
-    <input type="checkbox">
+    <input type="checkbox" />
     <span class="checkbox-style"></span> Subscribe to newsletter
   </label>
 </form>
@@ -133,7 +136,7 @@ Example of customized checkboxes:
 
   /* Add checkmark icon when checked */
   .custom-checkbox input:checked + .checkbox-style::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 5px;
     top: 2px;
@@ -166,14 +169,15 @@ Example of input hover and focus states:
 ```
 
 In this example:
+
 - The input field changes its border color when hovered.
 - A green border and box-shadow appear when the field is focused.
 
 #### 5. Responsive and Accessible Input Styles
 
 To make your input styles accessible, consider these best practices:
+
 - **Ensure sufficient color contrast**: Make sure the text and background colors have sufficient contrast for readability, especially for users with visual impairments. The Web Content Accessibility Guidelines (WCAG) recommend a minimum contrast ratio of 4.5:1.
-  
 - **Provide clear focus indicators**: Focus states should be visually distinct so that keyboard and screen reader users can easily navigate forms.
 
 - **Responsive design**: Make sure your form elements adjust appropriately on different screen sizes. Use relative units like percentages and `em` for sizing inputs and buttons.
@@ -204,7 +208,9 @@ Example of an animated submit button:
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .animated-button:hover {
@@ -223,6 +229,7 @@ In this example, the button grows slightly when hovered and shrinks when clicked
 ---
 
 #### Task for Today:
+
 1. Customize a form with text inputs, buttons, and other input elements.
 2. Add hover and focus states to enhance interactivity.
 3. Ensure your input styles are accessible by using proper contrast and clear focus indicators.

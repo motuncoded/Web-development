@@ -1,29 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Upload form</title>
-</head>
-<body>
+  </head>
+  <body>
     <form>
-  <label for="cv">Upload your CV:</label>
-  <input type="file" id="cv" name="cv" accept=".pdf, .docx" />
+      <label for="cv">Upload your CV:</label>
+      <input type="file" id="cv" name="cv" accept=".pdf, .docx" />
 
-<!-- with ARIA -->
-   <label id="upload-label" for="document">Upload a document:</label>
-  <input
-    type="file"
-    id="document"
-    name="document"
-    aria-labelledby="upload-label"
-    aria-describedby="file-requirements"
-  />
-  <span id="file-requirements">Only PDF, DOCX files. Max 5MB.</span>
-
-</form>
-
-
-
-</body>
+      <!-- with ARIA -->
+      <label id="upload-label" for="document">Upload a document:</label>
+      <input
+        type="file"
+        id="document"
+        name="document"
+        aria-labelledby="upload-label"
+        aria-describedby="file-requirements"
+      />
+      <span id="file-requirements">Only PDF, DOCX files. Max 5MB.</span>
+    </form>
+  </body>
 </html>

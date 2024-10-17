@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <button type="button" onclick="saveData()">Save</button>
+    </form>
+    <p></p>
+    <script>
+      function saveData() {
+        var username = document.getElementById("username").value;
+        localStorage.setItem("username", username);
+        alert("username saved");
+      }
+
+      window.onload = function () {
+        const savedUsername = localStorage.getItem("username");
+        if (savedUserame) {
+          document.getElementById("username").value = savedUsername;
+        }
+      };
+    </script>
+  </body>
+</html>

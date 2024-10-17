@@ -20,6 +20,7 @@ For your final project, you will create a **Complete Registration System** that 
 #### Project Requirements
 
 1. **Form Fields**:
+
    - Name
    - Email
    - Password
@@ -28,16 +29,19 @@ For your final project, you will create a **Complete Registration System** that 
    - Submit Button
 
 2. **Validation**:
+
    - Ensure all fields are required.
    - Validate the email format.
    - Ensure the password and confirm password fields match.
    - Check that the user accepts the terms and conditions.
 
 3. **Submission Handling**:
+
    - Use the `fetch` API to submit the form data asynchronously.
    - Simulate server response (you can use tools like JSONPlaceholder, or create a mock server).
 
 4. **User Feedback**:
+
    - Provide clear feedback to the user after form submission, indicating success or error.
    - Display error messages near the relevant fields if validation fails.
 
@@ -53,41 +57,59 @@ For your final project, you will create a **Complete Registration System** that 
    Build the HTML for your registration form, ensuring you use proper elements and attributes.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Registration</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <form id="registrationForm" aria-labelledby="formTitle">
-        <h1 id="formTitle">User Registration</h1>
-        
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required aria-required="true">
+      <h1 id="formTitle">User Registration</h1>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required aria-required="true">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-required="true" />
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required aria-required="true">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        aria-required="true"
+      />
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        aria-required="true"
+      />
 
-        <label>
-            <input type="checkbox" id="terms" name="terms" required>
-            I accept the terms and conditions
-        </label>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+        aria-required="true"
+      />
 
-        <button type="submit">Register</button>
-        <p id="feedbackMessage"></p>
+      <label>
+        <input type="checkbox" id="terms" name="terms" required />
+        I accept the terms and conditions
+      </label>
+
+      <button type="submit">Register</button>
+      <p id="feedbackMessage"></p>
     </form>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
@@ -95,63 +117,68 @@ For your final project, you will create a **Complete Registration System** that 
    Implement validation logic to ensure the data entered meets the required criteria.
 
 ```javascript
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document
+  .getElementById("registrationForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default submission
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const termsAccepted = document.getElementById('terms').checked;
-    const feedbackMessage = document.getElementById('feedbackMessage');
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const termsAccepted = document.getElementById("terms").checked;
+    const feedbackMessage = document.getElementById("feedbackMessage");
 
     // Clear previous feedback
-    feedbackMessage.textContent = '';
+    feedbackMessage.textContent = "";
 
     // Validation
     if (!termsAccepted) {
-        feedbackMessage.textContent = 'You must accept the terms and conditions.';
-        return;
+      feedbackMessage.textContent = "You must accept the terms and conditions.";
+      return;
     }
     if (password !== confirmPassword) {
-        feedbackMessage.textContent = 'Passwords do not match.';
-        return;
+      feedbackMessage.textContent = "Passwords do not match.";
+      return;
     }
     if (!validateEmail(email)) {
-        feedbackMessage.textContent = 'Please enter a valid email address.';
-        return;
+      feedbackMessage.textContent = "Please enter a valid email address.";
+      return;
     }
 
     // If validation passes, submit the form
     submitForm(name, email, password);
-});
+  });
 
 function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
 }
 
 function submitForm(name, email, password) {
-    const formData = { name, email, password };
+  const formData = { name, email, password };
 
-    fetch('https://jsonplaceholder.typicode.com/posts', { // Mock server URL
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    // Mock server URL
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.json();
     })
-    .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
+    .then((data) => {
+      document.getElementById("feedbackMessage").textContent =
+        "Registration successful!";
+      console.log("Success:", data);
     })
-    .then(data => {
-        document.getElementById('feedbackMessage').textContent = 'Registration successful!';
-        console.log('Success:', data);
-    })
-    .catch(error => {
-        document.getElementById('feedbackMessage').textContent = 'Error during registration.';
-        console.error('Error:', error);
+    .catch((error) => {
+      document.getElementById("feedbackMessage").textContent =
+        "Error during registration.";
+      console.error("Error:", error);
     });
 }
 ```
@@ -161,48 +188,48 @@ function submitForm(name, email, password) {
 
 ```css
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
 form {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
+  display: block;
+  margin: 10px 0 5px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #005fcc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 15px;
+  background-color: #005fcc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #004bb5;
+  background-color: #004bb5;
 }
 
 #feedbackMessage {
-    margin-top: 15px;
-    color: red; /* Error messages in red */
+  margin-top: 15px;
+  color: red; /* Error messages in red */
 }
 ```
 

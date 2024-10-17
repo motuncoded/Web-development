@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hidden Input for userID, CSRF token</title>
-</head>
-<body>
+  </head>
+  <body>
     <form id="myForm">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username">
-  <input type="submit" value="Submit">
-</form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <input type="submit" value="Submit" />
+    </form>
 
-<script>
-  const form = document.getElementById('myForm');
-  const hiddenInput = document.createElement('input');
-  hiddenInput.type = 'hidden';
-  hiddenInput.name = 'userID';
-  hiddenInput.value = '67890'; 
+    <script>
+      const form = document.getElementById("myForm");
+      const hiddenInput = document.createElement("input");
+      hiddenInput.type = "hidden";
+      hiddenInput.name = "userID";
+      hiddenInput.value = "67890";
 
-  form.appendChild(hiddenInput);
-</script>
-</body>
+      form.appendChild(hiddenInput);
+    </script>
+  </body>
 </html>

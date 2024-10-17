@@ -94,5 +94,3 @@ Create an HTML form with the following features:
 Collect the user’s name, email, and a password.
 Submit the form data using the POST method to a fictional URL /register.
 Use the required attribute to ensure all fields are filled before submission.
-
-
